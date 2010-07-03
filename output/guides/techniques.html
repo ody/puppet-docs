@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<title>Documentation | Puppet Labs</title>
+  	<meta name="description" content="The open source leader in data center automation">
+  	<link rel="alternate" type="text/xml" title="Puppet Labs RSS 0.92 Feed" href="http://puppetlabs.com/feed/rss/">
+  	<link rel="alternate" type="application/atom+xml" title="Puppet Labs Atom Feed" href="http://puppetlabs.com/feed/atom/">
+  	<link rel="alternate" type="application/rss+xml" title="Puppet Labs RSS 2.0 Feed" href="http://puppetlabs.com/feed/">
+  	<link rel="pingback" href="http://puppetlabs.com/xmlrpc.php">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://puppetlabs.com/xmlrpc.php?rsd" />
+    <link rel='index' title='Puppet Labs' href='http://docs.puppetlabs.com' />
+
+<!-- Google stats -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1537572-5");
+pageTracker._setDomainName(".puppetlabs.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- End Google stats -->
+
+
+    <!-- FIXME: absolute paths -->
+
+    <script type='text/javascript' src='/files/javascripts/html5.js'></script>
+    <script type='text/javascript' src='/files/javascripts/jquery-1.3.2.min.js'></script>
+    <script type='text/javascript' src='/files/javascripts/drop_down.js'></script>
+    <script type='text/javascript' src='/files/javascripts/code_highlighter.js'></script>
+
+    <script type='text/javascript' src='/files/javascripts/cufon-yui.js'></script>
+    <script type='text/javascript' src='/files/fonts/Klavika_400-Klavika_600.font.js'></script>
+    <script type='text/javascript' src='/files/javascripts/ampersands.js'></script>
+
+
+    <!-- All in One SEO Pack 1.6.10.1 by Michael Torbert of Semper Fi Web Design[127,146] -->
+    <meta name="keywords" content="Puppet, puppet labs, reductive labs, open source, system administrator, ruby, data center, automation, support" />
+    <link rel="canonical" href="http://docs.puppetlabs.com" />
+    <!-- /all in one seo pack -->
+	
+    <!-- FIXME: absolute paths -->
+
+    <link rel="stylesheet" type="text/css" href="/files/stylesheets/style.css" media="screen"> <!-- index -->
+
+    <!--[if IE 7]>
+	  <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_7.css" media="screen"> <!-- index -->
+    <![endif]-->
+  
+    <!--[if IE 8]>
+	    <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_8.css" media="screen"> <!-- index -->
+    <![endif]-->		
+
+  	<script type="text/javascript">
+      Cufon.replace('h1, h2', { fontWeight: '600' });
+  	</script>
+</head>
+
+
+
+        
+  <body id="resources" class="docs">
+  <style type="text/css">h1, h2{ visibility : hidden }</style>		
+  <!--[if IE 8]>
+    <style type="text/css">h1, h2{ visibility : visible }</style>
+  <![endif]-->		
+
+  	<header id="header">
+      <div class="site-width">
+    		<h1><a href="http://puppetlabs.com/"><span>Puppet Labs</span></a></h1>
+        <a class="screen-reader-content" href="#content">Skip navigation</a>
+        <nav>
+      		<ul id="global-navigation">
+            <li id="puppet-tab" class="with-submenu">
+
+              <a href="http://puppetlabs.com/puppet/">
+                <span>Puppet</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>            
+                <li>
+                  <ul>
+                    <li class="page_item page-item-757"><a href="http://puppetlabs.com/puppet/introduction/" title="Introduction">Introduction</a></li>
+                    <li class="page_item page-item-769"><a href="http://puppetlabs.com/puppet/requirements/" title="Requirements">Requirements</a></li>
+                    <li class="page_item page-item-828"><a href="http://puppetlabs.com/puppet/features/" title="Features">Features</a></li>
+                    <li class="page_item page-item-956"><a href="http://puppetlabs.com/puppet/solutions/" title="Solutions">Solutions</a></li>
+                    <li class="page_item page-item-1159"><a href="http://puppetlabs.com/puppet/users/" title="Users">Users</a></li>
+                    <li class="page_item page-item-1074"><a href="http://puppetlabs.com/resources/white-papers" title="White Papers">White Papers</a></li>
+                    <li class="page_item page-item-1495"><a href="http://puppetlabs.com/resources/case-studies" title="Case Studies">Case Studies</a></li>
+                    <li class="page_item page-item-1044"><a href="http://puppetlabs.com/resources/downloads" title="Downloads">Downloads</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li class="page_item page-item-751"><a href="http://puppetlabs.com/puppet/related-projects/dashboard/" title="Dashboard">Dashboard</a></li>
+                    <li class="page_item page-item-753"><a href="http://puppetlabs.com/puppet/related-projects/facter/" title="Facter">Facter</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="services-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/services/">
+                <span>Services</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-783"><a href="http://puppetlabs.com/services/overview/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-839"><a href="http://puppetlabs.com/services/support/" title="Enterprise Support">Enterprise Support</a></li>
+                <li class="page_item page-item-845"><a href="http://puppetlabs.com/services/training-workshops/" title="On-Site Training &amp; Consulting">On-Site Training &amp; Consulting</a></li>
+                <li class="page_item page-item-849"><a href="http://puppetlabs.com/category/events/upcoming/" title="Events &amp; Public Training">Events &amp; Public Training</a></li>
+                <li class="page_item page-item-851"><a href="http://puppetlabs.com/services/partners/" title="Partners">Partners</a></li>
+                <li class="page_item page-item-1037"><a href="http://puppetlabs.com/resources/customer-support" title="Customer Support">Customer Support</a></li>
+              </ul>
+            </li>
+            <li id="resources-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/resources/">
+                <span>Resources</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-1048"><a href="http://puppetlabs.com/resources/overview-2/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-1040"><a href="http://docs.puppetlabs.com" title="Documentation">Documentation</a></li>
+                <li class="page_item page-item-872"><a href="http://puppetlabs.com/resources/downloads/" title="Downloads">Downloads</a></li>
+                <li class="page_item page-item-835"><a href="http://puppetlabs.com/resources/white-papers/" title="White Papers">White Papers</a></li>
+                <li class="page_item page-item-833"><a href="http://puppetlabs.com/resources/case-studies/" title="Case Studies">Case Studies</a></li>
+                <li class="page_item page-item-1052"><a href="http://puppetlabs.com/resources/customer-support/" title="Customer Support">Customer Support</a></li>
+              </ul>
+
+            </li>
+            <li id="community-tab">
+              <a href="http://puppetlabs.com/community/">
+                <span>Community</span>
+              </a>
+            </li>
+
+            <li id="company-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/company/">
+                <span>Company</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li><a href="http://puppetlabs.com/company/">About Us</a></li>
+                <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+              </ul>
+            </li>
+      		</ul>	   
+          <ul id="misc-navigation">
+            <li><a href="http://docs.puppetlabs.com">Documentation</a></li>
+            <li><a href="http://puppetlabs.com/resources/customer-support/">Support</a></li>
+            <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+            <li><a href="http://puppetlabs.com/resources/downloads" class="gateway">Download</a></li>
+          </ul>
+        </nav>
+    	</div>
+    </header>  
+
+      <section id="masthead">
+        <div class="site-width">
+          <h1>Docs: <span class="section-name">Techniques</span></h1>
+          <ul id="doc-navigation">
+            <li><a href="/">Docs Home</a></li>
+            <li class="with-submenu">
+              <a href="#">
+                <span>Quick Nav</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+               <!-- the following links can't be relative, unfortunately -->
+               <!-- future: add some JS to disable this if running from file:// -->
+	            <dl>
+	              <dt>Guides</dt>
+	              <dd><a href="/index.html">Index</a></dd>
+                      <dt>Resource Types</dt>
+	              <dd><a href="/guides/types/">By Category</a></dd>
+	              <dd><a href="/guides/types/alphabetical_index.html">Alphabetical</a></dd>
+	              <dt>References</dt>
+                      <dd><a href="/references/0.25.5/">0.25.5</a></dd> 
+	              <dd><a href="/references/0.25.4/">0.25.4</a></dd>
+	              <dd><a href="/references/0.25.3/">0.25.3</a></dd>
+	              <dd><a href="/references/0.25.2/">0.25.2</a></dd>
+	              <dd><a href="/references/0.25.1/">0.25.1</a></dd>
+	              <dd><a href="/references/0.25.0/">0.25.0</a></dd>
+	              <dd><a href="/references/0.24.8/">0.24.8</a></dd>
+	              <dd><a href="/references/">Older Versions</a></dd>
+	            </dl>
+            </li>
+            <li><a href="/contribute.html">Contribute</a></li>
+          </ul>
+        </div>
+      </section>
+    
+      <section id="content">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <h1 id='techniques'>Techniques</h1>
+
+<p>Here are some useful tips &amp; tricks.</p>
+              <h2 id='how_can_i_manage_whole_directories_of_files_without_explicitly_listing_the_files'>How Can I Manage Whole Directories of Files Without Explicitly Listing the Files?</h2>
+
+<p>The file type has a parameter recurse which can be used to synchronize the contents of a target directory recursively with a chosen source. In the example below, the entire /etc/httpd/conf.d directory is synchronized recursively with the copy on the server:</p>
+
+<pre><code>file { &quot;/etc/httpd/conf.d&quot;:
+  source =&gt; &quot;puppet://server/vol/mnt1/adm/httpd/conf.d&quot;,
+  recurse =&gt; &quot;true&quot;
+}</code></pre>
+
+<h2 id='i_want_to_manage_a_directory_and_purge_its_contents'>I Want To Manage A Directory and Purge Its Contents</h2>
+
+<p>Many people try to do something like this:</p>
+
+<pre><code>file { &quot;/etc/nagios/conf.d&quot;:
+  owner   =&gt; nagios,
+  group   =&gt; nagios,
+  purge   =&gt; true,
+  recurse =&gt; true,
+  force   =&gt; true,
+}</code></pre>
+
+<p>It seems what most people expect to happen here is create the named directory, set the owner and group, then purge any files or directories that are not managed by puppet underneath that. But this is not the behaviour puppet will display. In fact the purge will silently fail.</p>
+
+<p>The workaround is to define a source for the directory that doesn&#8217;t exist.</p>
+
+<pre><code>file { &quot;/etc/nagios/conf.d&quot;:
+   owner   =&gt; nagios,
+   group   =&gt; nagios,
+   purge   =&gt; true,
+   recurse =&gt; true,
+   force   =&gt; true,
+   source  =&gt; &quot;puppet:///nagios/emtpy&quot;,
+}</code></pre>
+
+<p>The fileserver context (here &#8216;nagios&#8217;) must exist and be created by the fileserver and an empty directory must also exist, and puppet will purge the files as expected.</p>
+
+<h2 id='how_do_i_run_a_command_whenever_a_file_changes'>How Do I Run a Command Whenever A File Changes?</h2>
+
+<p>The answer is to use an exec resource with refreshonly set to true, such as in this case of telling bind to reload its configuration when it changes:</p>
+
+<pre><code>file { &quot;/etc/bind&quot;: source =&gt; &quot;/dist/apps/bind&quot; }
+
+exec { &quot;/usr/bin/ndc reload&quot;:
+  subscribe =&gt; File[&quot;/etc/bind&quot;],
+  refreshonly =&gt; true
+}</code></pre>
+
+<p>The exec has to subscribe to the file so it gets notified of changes.</p>
+
+<h2 id='how_can_i_ensure_a_group_exists_before_creating_a_user'>How Can I Ensure a Group Exists Before Creating a User?</h2>
+
+<p>In the example given below, we&#8217;d like to create a user called tim who we want to put in the fearme group. By using the require parameter, we can create a dependency between the user tim and the group fearme. The result is that user tim will not be created until puppet is certain that the fearme group exists.</p>
+
+<pre><code>group { &quot;fearme&quot;:
+        ensure =&gt; present,
+        gid =&gt; 1000
+}
+user { &quot;tim&quot;:
+        ensure =&gt; present,
+        gid =&gt; &quot;fearme&quot;,
+        groups =&gt; [&quot;adm&quot;, &quot;staff&quot;, &quot;root&quot;],
+        membership =&gt; minimum,
+        shell =&gt; &quot;/bin/bash&quot;,
+        require =&gt; Group[&quot;fearme&quot;]
+}</code></pre>
+
+<p>Note that Puppet will set this relationship up for you automatically, so you should not normally need to do this.</p>
+
+<h2 id='how_can_i_require_multiple_resources_simultaneously'>How Can I Require Multiple Resources Simultaneously?</h2>
+
+<p>In the example given below, we&#8217;re again adding the user tim (just as we did earlier in this document), but in addition to requiring tim&#8217;s primary group, fearme, we&#8217;re also requiring another group, fearmenot. Any reasonable number of resources can be required in this way.</p>
+
+<pre><code>user { &quot;tim&quot;:
+        ensure =&gt; present,
+        gid =&gt; &quot;fearme&quot;,
+        groups =&gt; [&quot;adm&quot;, &quot;staff&quot;, &quot;root&quot;, &quot;fearmenot&quot;],
+        membership =&gt; minimum,
+        shell =&gt; &quot;/bin/bash&quot;,
+        require =&gt; [ Group[&quot;fearme&quot;],
+                            Group[&quot;fearmenot&quot;]
+                          ]
+        }</code></pre>
+
+<h2 id='can_i_use_complex_comparisons_in_if_statements_and_variables'>Can I use complex comparisons in if statements and variables?</h2>
+
+<p>In Puppet version 0.24.6 onwards you can use complex expressions in if statements and variable assignments. You can see examples of how to do this in the <span><span>Language Tutorial</span></span> .</p>
+
+<p>In versions prior to 0.24.6 Puppet does not support complex conditionals: if can only test for the existence of a variable, and case can only switch on a defined string.</p>
+
+<p>However, a workaround is possible by using the generate() function to call out to Ruby or Perl to perform the comparison, eg:</p>
+
+<pre><code>if generate(&#39;/usr/bin/env&#39;, &#39;ruby&#39;, &#39;-e&#39;, &#39;puts :true if eval ARGV[0]&#39;, &quot;&#39;$operatingsystem&#39; =~ /redhat/&quot;) {
+     # do stuff
+}</code></pre>
+
+<p>The Perl equivalent is:</p>
+
+<pre><code>if generate(&#39;/usr/bin/env&#39;, &#39;perl&#39;, &#39;-e&#39;, &#39;print(&quot;true&quot;) if (eval shift)&#39;, &quot;&#39;$operatingsystem&#39; =~ /redhat/&quot;) {
+     # do stuff
+}</code></pre>
+
+<p>Note that the generate() function is executed on the Puppet master at manifest compilation, so cannot be used client-side. Also note the quoting around the final option - this is to ensure that $operatingsystem variable is interpolated by the parser and passed to the Ruby or Perl interpreter as a string.</p>
+
+<h2 id='can_i_output_facter_facts_in_yaml'>Can I output Facter facts in YAML?</h2>
+
+<p>Facter supports output of facts in YAML as well as to standard out. You need to run:</p>
+
+<pre><code># facter --yaml</code></pre>
+
+<p>To get this output, which you can redirect to a file for further processing.</p>
+
+<h2 id='can_i_check_the_syntax_of_my_templates'>Can I check the syntax of my templates?</h2>
+
+<p>ERB files are easy to syntax check. For a file mytemplate.erb, run:</p>
+
+<pre><code>$ erb -x -T &#39;-&#39; -P mytemplate.erb | ruby -c</code></pre>
+
+<p>The trim option specified corresponds to what Puppet uses.</p>
+            </div>
+            <div class="secondary-content">
+                    <div id="subCol">
+        <h3 class="chapter">Contents</h3>
+        <ol class="chapters">
+<li><a href="#how_can_i_manage_whole_directories_of_files_without_explicitly_listing_the_files">How Can I Manage Whole Directories of Files Without Explicitly Listing the Files?</a></li>
+<li><a href="#i_want_to_manage_a_directory_and_purge_its_contents">I Want To Manage A Directory and Purge Its Contents</a></li>
+<li><a href="#how_do_i_run_a_command_whenever_a_file_changes">How Do I Run a Command Whenever A File Changes?</a></li>
+<li><a href="#how_can_i_ensure_a_group_exists_before_creating_a_user">How Can I Ensure a Group Exists Before Creating a User?</a></li>
+<li><a href="#how_can_i_require_multiple_resources_simultaneously">How Can I Require Multiple Resources Simultaneously?</a></li>
+<li><a href="#can_i_use_complex_comparisons_in_if_statements_and_variables">Can I use complex comparisons in if statements and variables?</a></li>
+<li><a href="#can_i_output_facter_facts_in_yaml">Can I output Facter facts in YAML?</a></li>
+<li><a href="#can_i_check_the_syntax_of_my_templates">Can I check the syntax of my templates?</a></li></ol></div>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+  		<footer id="footer">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <section id="newsletter">
+                <h4>Newsletter</h4>
+                <p>Stay up to date on all things puppet</p>
+                <form action="http://lfov.net/webrecorder/f" method="post" name="Newsletter">
+                  <input type="hidden" name="formid" value="3d424fd0-4204-435f-afde-aa1c4a6bc2f1"/>
+                  <input type="hidden" name="cid" value="LF_c268993e"/>
+                  <fieldset>
+                    <legend>Newsletter</legend>
+                    <label form="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                    <button type="submit">Subscribe</button>
+                  </fieldset>
+                </form>
+              </section>
+              <section id="elsewhere">
+                <h4>Elsewhere</h4>
+                <ul>
+                  <li class="chat"><a href="http://webchat.freenode.net/?channels=puppet" rel="external"><span class="indicator"></span><span>Chat with us on IRC</span></a></li>
+                  <li class="discussion"><a href="http://groups.google.com/group/puppet-users?pli=1" rel="external"><span class="indicator"></span><span>Join the Mailing List</span></a></li>
+                  <li class="facebook"><a href="http://www.facebook.com/pages/Portland-OR/Reductive-Labs/190644013795?ref=ts&v=wall" rel="external"><span class="indicator"></span><span>Become a Fan on Facebook</span></a></li>
+                  <li class="subscribe"><a href="http://feeds.feedburner.com/PuppetLabs" rel="external"><span class="indicator"></span><span>Subscribe to our blog</span></a></li>
+
+                  <li class="twitter"><a href="http://twitter.com/puppetlabs" rel="external"><span class="indicator"></span><span>Follow us on Twitter</span></a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="secondary-content">
+              <section id="book-it">
+                <h4>Get the book!</h4>
+                <p>Written by James Turnbull, <a href="http://apress.com/book/view/1590599780" rel="nofollow">Pulling Strings with Puppet</a> is the first book to introduce the powerful Puppet system administration tool. </p>
+                <img src="http://puppetlabs.com/images/book.png" />
+              </section>
+            </div>
+          </div>
+        </div>
+  		</footer>
+      <div id="copyright">
+        <div class="site-width">
+          &copy; 2010 <a href="http://puppetlabs.com/" title="Puppet Labs">Puppet Labs</a>
+          <span class="vcard">
+           <span class="org">Puppet Labs</span>
+           <a class="email" href="mailto:info@puppetlabs.com">info@puppetlabs.com</a>
+            <span class="adr">
+             <span class="street-address">222 NW Davis Street</span>
+             /
+             <span class="locality">Portland</span>, 
+             <span class="region">OR</span>
+             <span class="postal-code">97209</span>
+
+            </span>
+           <span class="tel">+1 503-805-9065</span>
+          </span>          
+        </div>
+      </div>
+    </div>
+    <!-- BEGIN: LOOPFUSE TRACKING -->
+    <script src="http://lfov.net/webrecorder/js/listen.js" type="text/Javascript"></script>
+    <script type="text/Javascript">
+    _lf_cid = "LF_c268993e";
+    _lf_remora();
+    </script>
+    <!-- END: LOOPFUSE TRACKING -->
+    
+  	<script type="text/javascript">Cufon.now();</script>
+  	<style type="text/css">h1, h2{ visibility : visible }</style>
+  	
+  </body>
+</html>
