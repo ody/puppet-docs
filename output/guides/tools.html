@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<title>Documentation | Puppet Labs - Tools</title>
+  	<meta name="description" content="The open source leader in data center automation">
+  	<link rel="alternate" type="text/xml" title="Puppet Labs RSS 0.92 Feed" href="http://puppetlabs.com/feed/rss/">
+  	<link rel="alternate" type="application/atom+xml" title="Puppet Labs Atom Feed" href="http://puppetlabs.com/feed/atom/">
+  	<link rel="alternate" type="application/rss+xml" title="Puppet Labs RSS 2.0 Feed" href="http://puppetlabs.com/feed/">
+  	<link rel="pingback" href="http://puppetlabs.com/xmlrpc.php">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://puppetlabs.com/xmlrpc.php?rsd" />
+    <link rel='index' title='Puppet Labs' href='http://docs.puppetlabs.com' />
+
+<!-- Google stats -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1537572-5");
+pageTracker._setDomainName(".puppetlabs.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- End Google stats -->
+
+
+    <!-- FIXME: absolute paths -->
+
+    <script type='text/javascript' src='/files/javascripts/html5.js'></script>
+    <script type='text/javascript' src='/files/javascripts/jquery-1.3.2.min.js'></script>
+    <script type='text/javascript' src='/files/javascripts/drop_down.js'></script>
+    <script type='text/javascript' src='/files/javascripts/code_highlighter.js'></script>
+
+    <script type='text/javascript' src='/files/javascripts/cufon-yui.js'></script>
+    <script type='text/javascript' src='/files/fonts/Klavika_400-Klavika_600.font.js'></script>
+    <script type='text/javascript' src='/files/javascripts/ampersands.js'></script>
+
+
+    <!-- All in One SEO Pack 1.6.10.1 by Michael Torbert of Semper Fi Web Design[127,146] -->
+    <meta name="keywords" content="Puppet, puppet labs, reductive labs, open source, system administrator, ruby, data center, automation, support" />
+    <link rel="canonical" href="http://docs.puppetlabs.com" />
+    <!-- /all in one seo pack -->
+	
+    <!-- FIXME: absolute paths -->
+
+    <link rel="stylesheet" type="text/css" href="/files/stylesheets/style.css" media="screen"> <!-- index -->
+
+    <!--[if IE 7]>
+	  <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_7.css" media="screen"> <!-- index -->
+    <![endif]-->
+  
+    <!--[if IE 8]>
+	    <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_8.css" media="screen"> <!-- index -->
+    <![endif]-->		
+
+  	<script type="text/javascript">
+      Cufon.replace('h1, h2', { fontWeight: '600' });
+  	</script>
+</head>
+
+
+
+        
+  <body id="resources" class="docs">
+  <style type="text/css">h1, h2{ visibility : hidden }</style>		
+  <!--[if IE 8]>
+    <style type="text/css">h1, h2{ visibility : visible }</style>
+  <![endif]-->		
+
+  	<header id="header">
+      <div class="site-width">
+    		<h1><a href="http://puppetlabs.com/"><span>Puppet Labs</span></a></h1>
+        <a class="screen-reader-content" href="#content">Skip navigation</a>
+        <nav>
+      		<ul id="global-navigation">
+            <li id="puppet-tab" class="with-submenu">
+
+              <a href="http://puppetlabs.com/puppet/">
+                <span>Puppet</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>            
+                <li>
+                  <ul>
+                    <li class="page_item page-item-757"><a href="http://puppetlabs.com/puppet/introduction/" title="Introduction">Introduction</a></li>
+                    <li class="page_item page-item-769"><a href="http://puppetlabs.com/puppet/requirements/" title="Requirements">Requirements</a></li>
+                    <li class="page_item page-item-828"><a href="http://puppetlabs.com/puppet/features/" title="Features">Features</a></li>
+                    <li class="page_item page-item-956"><a href="http://puppetlabs.com/puppet/solutions/" title="Solutions">Solutions</a></li>
+                    <li class="page_item page-item-1159"><a href="http://puppetlabs.com/puppet/users/" title="Users">Users</a></li>
+                    <li class="page_item page-item-1074"><a href="http://puppetlabs.com/resources/white-papers" title="White Papers">White Papers</a></li>
+                    <li class="page_item page-item-1495"><a href="http://puppetlabs.com/resources/case-studies" title="Case Studies">Case Studies</a></li>
+                    <li class="page_item page-item-1044"><a href="http://puppetlabs.com/resources/downloads" title="Downloads">Downloads</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li class="page_item page-item-751"><a href="http://puppetlabs.com/puppet/related-projects/dashboard/" title="Dashboard">Dashboard</a></li>
+                    <li class="page_item page-item-753"><a href="http://puppetlabs.com/puppet/related-projects/facter/" title="Facter">Facter</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="services-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/services/">
+                <span>Services</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-783"><a href="http://puppetlabs.com/services/overview/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-839"><a href="http://puppetlabs.com/services/support/" title="Enterprise Support">Enterprise Support</a></li>
+                <li class="page_item page-item-845"><a href="http://puppetlabs.com/services/training-workshops/" title="On-Site Training &amp; Consulting">On-Site Training &amp; Consulting</a></li>
+                <li class="page_item page-item-849"><a href="http://puppetlabs.com/category/events/upcoming/" title="Events &amp; Public Training">Events &amp; Public Training</a></li>
+                <li class="page_item page-item-851"><a href="http://puppetlabs.com/services/partners/" title="Partners">Partners</a></li>
+                <li class="page_item page-item-1037"><a href="http://puppetlabs.com/resources/customer-support" title="Customer Support">Customer Support</a></li>
+              </ul>
+            </li>
+            <li id="resources-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/resources/">
+                <span>Resources</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-1048"><a href="http://puppetlabs.com/resources/overview-2/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-1040"><a href="http://docs.puppetlabs.com" title="Documentation">Documentation</a></li>
+                <li class="page_item page-item-872"><a href="http://puppetlabs.com/resources/downloads/" title="Downloads">Downloads</a></li>
+                <li class="page_item page-item-835"><a href="http://puppetlabs.com/resources/white-papers/" title="White Papers">White Papers</a></li>
+                <li class="page_item page-item-833"><a href="http://puppetlabs.com/resources/case-studies/" title="Case Studies">Case Studies</a></li>
+                <li class="page_item page-item-1052"><a href="http://puppetlabs.com/resources/customer-support/" title="Customer Support">Customer Support</a></li>
+              </ul>
+
+            </li>
+            <li id="community-tab">
+              <a href="http://puppetlabs.com/community/">
+                <span>Community</span>
+              </a>
+            </li>
+
+            <li id="company-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/company/">
+                <span>Company</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li><a href="http://puppetlabs.com/company/">About Us</a></li>
+                <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+              </ul>
+            </li>
+      		</ul>	   
+          <ul id="misc-navigation">
+            <li><a href="http://docs.puppetlabs.com">Documentation</a></li>
+            <li><a href="http://puppetlabs.com/resources/customer-support/">Support</a></li>
+            <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+            <li><a href="http://puppetlabs.com/resources/downloads" class="gateway">Download</a></li>
+          </ul>
+        </nav>
+    	</div>
+    </header>  
+
+      <section id="masthead">
+        <div class="site-width">
+          <h1>Docs: <span class="section-name">Tools</span></h1>
+          <ul id="doc-navigation">
+            <li><a href="/">Docs Home</a></li>
+            <li class="with-submenu">
+              <a href="#">
+                <span>Quick Nav</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+               <!-- the following links can't be relative, unfortunately -->
+               <!-- future: add some JS to disable this if running from file:// -->
+	            <dl>
+	              <dt>Guides</dt>
+	              <dd><a href="/index.html">Index</a></dd>
+                      <dt>Resource Types</dt>
+	              <dd><a href="/guides/types/">By Category</a></dd>
+	              <dd><a href="/guides/types/alphabetical_index.html">Alphabetical</a></dd>
+	              <dt>References</dt>
+                      <dd><a href="/references/2.6.0/">2.6.0</a></dd> 
+                      <dd><a href="/references/0.25.5/">0.25.5</a></dd> 
+	              <dd><a href="/references/0.25.4/">0.25.4</a></dd>
+	              <dd><a href="/references/0.25.3/">0.25.3</a></dd>
+	              <dd><a href="/references/0.25.2/">0.25.2</a></dd>
+	              <dd><a href="/references/0.25.1/">0.25.1</a></dd>
+	              <dd><a href="/references/0.25.0/">0.25.0</a></dd>
+	              <dd><a href="/references/0.24.8/">0.24.8</a></dd>
+	              <dd><a href="/references/">Older Versions</a></dd>
+	            </dl>
+            </li>
+            <li><a href="/contribute.html">Contribute</a></li>
+          </ul>
+        </div>
+      </section>
+    
+      <section id="content">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <h1 id='tools'>Tools</h1>
+
+<p>Here&#8217;s an overview of the major tools in the Puppet solution.</p>
+              <h2 id='single_binary'>Single binary</h2>
+
+<p>From verison 2.6.0 and onwards all the Puppet functions are also available via a single Puppet binary, in the style of git.</p>
+
+<p>List of binary changes</p>
+
+<p>puppetmasterd –&gt; puppet master puppetd –&gt; puppet agent puppet –&gt; puppet apply puppetca –&gt; puppet cert ralsh –&gt; puppet resource puppetrun –&gt; puppet kick puppetqd –&gt; puppet queue filebucket –&gt; puppet filebucket puppetdoc –&gt; puppet doc pi –&gt; puppet describe</p>
+
+<p>This also results in a change in the puppet.conf configuration file. The sections, previously things like <span>puppetd</span>, now should be renamed to match the new binary names. So <span>puppetd</span> becomes <span>agent</span>. You will be prompted to do this when you start Puppet. A log message will be generated for each section that needs to be renamed. This is merely a warning – existing configuration file will work unchanged.</p>
+
+<h2 id='manpage_documentation'>Manpage documentation</h2>
+
+<p>Additional information about the options supported by the various tools listed below are listed in the manpages for those tools. Please consult the manpages to learn more.</p>
+
+<h2 id='puppetmasterd_or_puppet_master'>puppetmasterd or puppet master</h2>
+
+<p>Puppetmasterd is a central management daemon. In most installations, you&#8217;ll have one puppetmasterd server and each managed machine will run &#8216;puppetd&#8217;. By default, puppetmasterd runs a certificate authority, which you can read more about in the <a href='./security.html'>security section</a>.</p>
+
+<p>Puppetmasterd will automatically serve up puppet orders to managed systems, as well as files and templates.</p>
+
+<p>The main configuration file for both puppetmasterd and puppetd/puppet is /etc/puppet/puppet.conf, which has sections for each application.</p>
+
+<h2 id='puppetd_or_puppet_agent'>puppetd or puppet agent</h2>
+
+<p>Puppetd runs on each managed node. By default, it will wake up every 30 minutes (configurable), check in with puppetmasterd, send puppetmasterd new information about the system (facts), and then recieve a &#8216;compiled catalog&#8217; containing the desired system configuration that should be applied as ordered by the central server. Servers only see the information that the central server tells them they should see, for instance, the server does not see configuration orders for other servers. It is then the responsibility of the puppet daemon to make the system match the orders given. Modules and custom plugins stored on the puppetmasterd server are transferred down to managed nodes automatically.</p>
+
+<h2 id='puppet_or_puppet_apply'>puppet or puppet apply</h2>
+
+<p>When running Puppet locally (for instance, to test manifests, or in a non-networked disconnected case), puppet is run instead of puppetd. It then uses local files, and does not try to contact the central server. Otherwise, it behaves the same as puppetd.</p>
+
+<h2 id='puppetca_or_puppet_cert'>puppetca or puppet cert</h2>
+
+<p>The puppetca or puppet cert command is used to sign, list and examine certificates used by Puppet to secure the connection between the Puppet master and agents. The most common usage is to sign the certificates of Puppet agents awaiting authorisation:</p>
+
+<pre><code>&gt; puppet cert --list
+agent.example.com
+
+&gt; puppet cert --sign agent.example.com</code></pre>
+
+<p>You can also list all signed and unsigned certificates:</p>
+
+<pre><code>&gt; puppet cert --all and --list
++ agent.example.com
+agent2.example.com</code></pre>
+
+<p>Certificates with a + next to them are signed. All others are awaiting signature.</p>
+
+<h2 id='puppetdoc_or_puppet_doc'>puppetdoc or puppet doc</h2>
+
+<p>Puppet doc generates documentation about Puppet and also about your Puppet manifests. It allows you to document your manifests and output details of your configuration in HTML, Markdown and RDoc.</p>
+
+<h2 id='ralsh_or_puppet_resource'>ralsh or puppet resource</h2>
+
+<p>Ralsh (also available in Puppet 2.6.0 onwards as <code>puppet resource</code>) is the &#8220;Resource Abstraction Layer SHell&#8221;. It can be used to try out Puppet concepts, or simply to manipulate your local system.</p>
+
+<p>There are two main usage modes. For example, to list information about the user &#8216;xyz&#8217;:</p>
+
+<pre><code>&gt; puppet resource User &quot;xyz&quot;
+
+user { &#39;xyz&#39;:
+   home =&gt; &#39;/home/xyz&#39;,
+   shell =&gt; &#39;/bin/bash&#39;,
+   uid =&gt; &#39;1000&#39;,
+   comment =&gt; &#39;xyz,,,&#39;,
+   gid =&gt; &#39;1000&#39;,
+   groups =&gt; [&#39;adm&#39;,&#39;dialout&#39;,&#39;cdrom&#39;,&#39;sudo&#39;,&#39;plugdev&#39;,&#39;lpadmin&#39;,&#39;admin&#39;,&#39;sambashare&#39;,&#39;libvirtd&#39;],
+   ensure =&gt; &#39;present&#39;
+}</code></pre>
+
+<p>It can also be used to make additions and removals, as well as to list resources found on a system:</p>
+
+<pre><code>&gt; puppet resource User &quot;bob&quot; ensure=present group=admin
+
+notice: /User[bob]/ensure: created
+user { &#39;bob&#39;:
+    shell =&gt; &#39;/bin/sh&#39;,
+    home =&gt; &#39;/home/bob&#39;,
+    uid =&gt; &#39;1001&#39;,
+    gid =&gt; &#39;1001&#39;,
+    ensure =&gt; &#39;present&#39;,
+    password =&gt; &#39;!&#39;
+}
+
+&gt; puppet resource User &quot;bob&quot; ensure=absent
+...
+
+&gt; puppet resource  User
+...</code></pre>
+
+<p>Ralsh, therefore, can be a handy tool for admins who have to maintain various platforms. It&#8217;s possible to use ralsh the exact same way on OS X as it is Linux; eliminating the need to remember differences between commands. You&#8217;ll also see that it aggregrates information from multiple files and shows them together in a unified context. Thus, for new Puppet users, ralsh can make a great introduction to the power of the resource abstraction layer.</p>
+
+<h2 id='facter'>facter</h2>
+
+<p>Clients use a library/tool called facter to provide information about the OS (version information, IP information, etc) to the central server. These variables can then be used in conditionals, string expressions, and in templates. To see a list of facts any node offers, simply run &#8216;facter&#8217; on that node. Facter is a required/included part of all Puppet installations.</p>
+            </div>
+            <div class="secondary-content">
+                    <div id="subCol">
+        <h3 class="chapter">Contents</h3>
+        <ol class="chapters">
+<li><a href="#single_binary">Single binary</a></li>
+<li><a href="#manpage_documentation">Manpage documentation</a></li>
+<li><a href="#puppetmasterd_or_puppet_master">puppetmasterd or puppet master</a></li>
+<li><a href="#puppetd_or_puppet_agent">puppetd or puppet agent</a></li>
+<li><a href="#puppet_or_puppet_apply">puppet or puppet apply</a></li>
+<li><a href="#puppetca_or_puppet_cert">puppetca or puppet cert</a></li>
+<li><a href="#puppetdoc_or_puppet_doc">puppetdoc or puppet doc</a></li>
+<li><a href="#ralsh_or_puppet_resource">ralsh or puppet resource</a></li>
+<li><a href="#facter">facter</a></li></ol></div>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+  		<footer id="footer">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <section id="newsletter">
+                <h4>Newsletter</h4>
+                <p>Stay up to date on all things puppet</p>
+                <form action="http://lfov.net/webrecorder/f" method="post" name="Newsletter">
+                  <input type="hidden" name="formid" value="3d424fd0-4204-435f-afde-aa1c4a6bc2f1"/>
+                  <input type="hidden" name="cid" value="LF_c268993e"/>
+                  <fieldset>
+                    <legend>Newsletter</legend>
+                    <label form="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                    <button type="submit">Subscribe</button>
+                  </fieldset>
+                </form>
+              </section>
+              <section id="elsewhere">
+                <h4>Elsewhere</h4>
+                <ul>
+                  <li class="chat"><a href="http://webchat.freenode.net/?channels=puppet" rel="external"><span class="indicator"></span><span>Chat with us on IRC</span></a></li>
+                  <li class="discussion"><a href="http://groups.google.com/group/puppet-users?pli=1" rel="external"><span class="indicator"></span><span>Join the Mailing List</span></a></li>
+                  <li class="facebook"><a href="http://www.facebook.com/pages/Portland-OR/Reductive-Labs/190644013795?ref=ts&v=wall" rel="external"><span class="indicator"></span><span>Become a Fan on Facebook</span></a></li>
+                  <li class="subscribe"><a href="http://feeds.feedburner.com/PuppetLabs" rel="external"><span class="indicator"></span><span>Subscribe to our blog</span></a></li>
+
+                  <li class="twitter"><a href="http://twitter.com/puppetlabs" rel="external"><span class="indicator"></span><span>Follow us on Twitter</span></a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="secondary-content">
+              <section id="book-it">
+                <h4>Get the book!</h4>
+                <p>Written by James Turnbull, <a href="http://apress.com/book/view/1590599780" rel="nofollow">Pulling Strings with Puppet</a> is the first book to introduce the powerful Puppet system administration tool. </p>
+                <img src="http://puppetlabs.com/images/book.png" />
+              </section>
+            </div>
+          </div>
+        </div>
+  		</footer>
+      <div id="copyright">
+        <div class="site-width">
+          &copy; 2010 <a href="http://puppetlabs.com/" title="Puppet Labs">Puppet Labs</a>
+          <span class="vcard">
+           <span class="org">Puppet Labs</span>
+           <a class="email" href="mailto:info@puppetlabs.com">info@puppetlabs.com</a>
+            <span class="adr">
+             <span class="street-address">222 NW Davis Street</span>
+             /
+             <span class="locality">Portland</span>, 
+             <span class="region">OR</span>
+             <span class="postal-code">97209</span>
+
+            </span>
+           <span class="tel">+1 503-805-9065</span>
+          </span>          
+        </div>
+      </div>
+    </div>
+    <!-- BEGIN: LOOPFUSE TRACKING -->
+    <script src="http://lfov.net/webrecorder/js/listen.js" type="text/Javascript"></script>
+    <script type="text/Javascript">
+    _lf_cid = "LF_c268993e";
+    _lf_remora();
+    </script>
+    <!-- END: LOOPFUSE TRACKING -->
+    
+  	<script type="text/javascript">Cufon.now();</script>
+  	<style type="text/css">h1, h2{ visibility : visible }</style>
+  	
+  </body>
+</html>

@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<title>Documentation | Puppet Labs - Language Tutorial</title>
+  	<meta name="description" content="The open source leader in data center automation">
+  	<link rel="alternate" type="text/xml" title="Puppet Labs RSS 0.92 Feed" href="http://puppetlabs.com/feed/rss/">
+  	<link rel="alternate" type="application/atom+xml" title="Puppet Labs Atom Feed" href="http://puppetlabs.com/feed/atom/">
+  	<link rel="alternate" type="application/rss+xml" title="Puppet Labs RSS 2.0 Feed" href="http://puppetlabs.com/feed/">
+  	<link rel="pingback" href="http://puppetlabs.com/xmlrpc.php">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://puppetlabs.com/xmlrpc.php?rsd" />
+    <link rel='index' title='Puppet Labs' href='http://docs.puppetlabs.com' />
+
+<!-- Google stats -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1537572-5");
+pageTracker._setDomainName(".puppetlabs.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- End Google stats -->
+
+
+    <!-- FIXME: absolute paths -->
+
+    <script type='text/javascript' src='/files/javascripts/html5.js'></script>
+    <script type='text/javascript' src='/files/javascripts/jquery-1.3.2.min.js'></script>
+    <script type='text/javascript' src='/files/javascripts/drop_down.js'></script>
+    <script type='text/javascript' src='/files/javascripts/code_highlighter.js'></script>
+
+    <script type='text/javascript' src='/files/javascripts/cufon-yui.js'></script>
+    <script type='text/javascript' src='/files/fonts/Klavika_400-Klavika_600.font.js'></script>
+    <script type='text/javascript' src='/files/javascripts/ampersands.js'></script>
+
+
+    <!-- All in One SEO Pack 1.6.10.1 by Michael Torbert of Semper Fi Web Design[127,146] -->
+    <meta name="keywords" content="Puppet, puppet labs, reductive labs, open source, system administrator, ruby, data center, automation, support" />
+    <link rel="canonical" href="http://docs.puppetlabs.com" />
+    <!-- /all in one seo pack -->
+	
+    <!-- FIXME: absolute paths -->
+
+    <link rel="stylesheet" type="text/css" href="/files/stylesheets/style.css" media="screen"> <!-- index -->
+
+    <!--[if IE 7]>
+	  <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_7.css" media="screen"> <!-- index -->
+    <![endif]-->
+  
+    <!--[if IE 8]>
+	    <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_8.css" media="screen"> <!-- index -->
+    <![endif]-->		
+
+  	<script type="text/javascript">
+      Cufon.replace('h1, h2', { fontWeight: '600' });
+  	</script>
+</head>
+
+
+
+        
+  <body id="resources" class="docs">
+  <style type="text/css">h1, h2{ visibility : hidden }</style>		
+  <!--[if IE 8]>
+    <style type="text/css">h1, h2{ visibility : visible }</style>
+  <![endif]-->		
+
+  	<header id="header">
+      <div class="site-width">
+    		<h1><a href="http://puppetlabs.com/"><span>Puppet Labs</span></a></h1>
+        <a class="screen-reader-content" href="#content">Skip navigation</a>
+        <nav>
+      		<ul id="global-navigation">
+            <li id="puppet-tab" class="with-submenu">
+
+              <a href="http://puppetlabs.com/puppet/">
+                <span>Puppet</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>            
+                <li>
+                  <ul>
+                    <li class="page_item page-item-757"><a href="http://puppetlabs.com/puppet/introduction/" title="Introduction">Introduction</a></li>
+                    <li class="page_item page-item-769"><a href="http://puppetlabs.com/puppet/requirements/" title="Requirements">Requirements</a></li>
+                    <li class="page_item page-item-828"><a href="http://puppetlabs.com/puppet/features/" title="Features">Features</a></li>
+                    <li class="page_item page-item-956"><a href="http://puppetlabs.com/puppet/solutions/" title="Solutions">Solutions</a></li>
+                    <li class="page_item page-item-1159"><a href="http://puppetlabs.com/puppet/users/" title="Users">Users</a></li>
+                    <li class="page_item page-item-1074"><a href="http://puppetlabs.com/resources/white-papers" title="White Papers">White Papers</a></li>
+                    <li class="page_item page-item-1495"><a href="http://puppetlabs.com/resources/case-studies" title="Case Studies">Case Studies</a></li>
+                    <li class="page_item page-item-1044"><a href="http://puppetlabs.com/resources/downloads" title="Downloads">Downloads</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li class="page_item page-item-751"><a href="http://puppetlabs.com/puppet/related-projects/dashboard/" title="Dashboard">Dashboard</a></li>
+                    <li class="page_item page-item-753"><a href="http://puppetlabs.com/puppet/related-projects/facter/" title="Facter">Facter</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="services-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/services/">
+                <span>Services</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-783"><a href="http://puppetlabs.com/services/overview/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-839"><a href="http://puppetlabs.com/services/support/" title="Enterprise Support">Enterprise Support</a></li>
+                <li class="page_item page-item-845"><a href="http://puppetlabs.com/services/training-workshops/" title="On-Site Training &amp; Consulting">On-Site Training &amp; Consulting</a></li>
+                <li class="page_item page-item-849"><a href="http://puppetlabs.com/category/events/upcoming/" title="Events &amp; Public Training">Events &amp; Public Training</a></li>
+                <li class="page_item page-item-851"><a href="http://puppetlabs.com/services/partners/" title="Partners">Partners</a></li>
+                <li class="page_item page-item-1037"><a href="http://puppetlabs.com/resources/customer-support" title="Customer Support">Customer Support</a></li>
+              </ul>
+            </li>
+            <li id="resources-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/resources/">
+                <span>Resources</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-1048"><a href="http://puppetlabs.com/resources/overview-2/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-1040"><a href="http://docs.puppetlabs.com" title="Documentation">Documentation</a></li>
+                <li class="page_item page-item-872"><a href="http://puppetlabs.com/resources/downloads/" title="Downloads">Downloads</a></li>
+                <li class="page_item page-item-835"><a href="http://puppetlabs.com/resources/white-papers/" title="White Papers">White Papers</a></li>
+                <li class="page_item page-item-833"><a href="http://puppetlabs.com/resources/case-studies/" title="Case Studies">Case Studies</a></li>
+                <li class="page_item page-item-1052"><a href="http://puppetlabs.com/resources/customer-support/" title="Customer Support">Customer Support</a></li>
+              </ul>
+
+            </li>
+            <li id="community-tab">
+              <a href="http://puppetlabs.com/community/">
+                <span>Community</span>
+              </a>
+            </li>
+
+            <li id="company-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/company/">
+                <span>Company</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li><a href="http://puppetlabs.com/company/">About Us</a></li>
+                <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+              </ul>
+            </li>
+      		</ul>	   
+          <ul id="misc-navigation">
+            <li><a href="http://docs.puppetlabs.com">Documentation</a></li>
+            <li><a href="http://puppetlabs.com/resources/customer-support/">Support</a></li>
+            <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+            <li><a href="http://puppetlabs.com/resources/downloads" class="gateway">Download</a></li>
+          </ul>
+        </nav>
+    	</div>
+    </header>  
+
+      <section id="masthead">
+        <div class="site-width">
+          <h1>Docs: <span class="section-name">Language Tutorial</span></h1>
+          <ul id="doc-navigation">
+            <li><a href="/">Docs Home</a></li>
+            <li class="with-submenu">
+              <a href="#">
+                <span>Quick Nav</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+               <!-- the following links can't be relative, unfortunately -->
+               <!-- future: add some JS to disable this if running from file:// -->
+	            <dl>
+	              <dt>Guides</dt>
+	              <dd><a href="/index.html">Index</a></dd>
+                      <dt>Resource Types</dt>
+	              <dd><a href="/guides/types/">By Category</a></dd>
+	              <dd><a href="/guides/types/alphabetical_index.html">Alphabetical</a></dd>
+	              <dt>References</dt>
+                      <dd><a href="/references/2.6.0/">2.6.0</a></dd> 
+                      <dd><a href="/references/0.25.5/">0.25.5</a></dd> 
+	              <dd><a href="/references/0.25.4/">0.25.4</a></dd>
+	              <dd><a href="/references/0.25.3/">0.25.3</a></dd>
+	              <dd><a href="/references/0.25.2/">0.25.2</a></dd>
+	              <dd><a href="/references/0.25.1/">0.25.1</a></dd>
+	              <dd><a href="/references/0.25.0/">0.25.0</a></dd>
+	              <dd><a href="/references/0.24.8/">0.24.8</a></dd>
+	              <dd><a href="/references/">Older Versions</a></dd>
+	            </dl>
+            </li>
+            <li><a href="/contribute.html">Contribute</a></li>
+          </ul>
+        </div>
+      </section>
+    
+      <section id="content">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <h1 id='language_tutorial'>Language Tutorial</h1>
+
+<p>The purpose of Puppet&#8217;s language is to make it easy to specify the resources you need to manage on the machines you&#8217;re managing.</p>
+
+<p>This guide will show you how the language works, going through some basic concepts. Understanding the Puppet language is key, as it&#8217;s the main driver of how you tell your Puppet managed machines what to do.</p>
+              <h2 id='ready_to_dive_in'>Ready To Dive In?</h2>
+
+<p>Puppet language is really relatively simple compared to many programming languages. As you are reading over this guide, it may also be helpful to look over various Puppet modules people have already written. Complete real world examples can serve as a great introduction to Puppet. See the <a href='/github/modules.html'>Modules</a> page for more information and some links to list of community developed Puppet content.</p>
+
+<h2 id='resources'>Resources</h2>
+
+<p>The fundamental unit of modelling in Puppet is a resource. Resources describe some aspect of a system; it might be a file, a service, a package, or perhaps even a custom resource that you have developed. We&#8217;ll show later how resources can be aggregrated together with &#8220;defines&#8221; and &#8220;classes&#8221;, and even show how to organize things with &#8220;modules&#8221;, but resources are what we should start with first.</p>
+
+<p>Each resource has a type, a title, and a list of attributes &#8211; each resource in Puppet can support various attributes, though many of them will have reasonable defaults and you won&#8217;t have to specify all of them.</p>
+
+<p>You can find all of the supported resource types, their valid attributes, and documentation for all of it in the <a href='./types/'>Type Guides</a> and <a href='/references/'>References</a>. The guides section will provide in depth examples and commentary, where as the references version is autogenerated (and also available for past versions of Puppet). We would recommend starting with the &#8216;guides&#8217;.</p>
+
+<p>Let&#8217;s get started. Here&#8217;s a simple example of a resource in Puppet, where we are describing the permissions and ownership of a file:</p>
+
+<pre><code>file { &#39;/etc/passwd&#39;:
+    owner =&gt; root,
+    group =&gt; root,
+    mode  =&gt; 644,
+}</code></pre>
+
+<p>Any machine on which this snippet is executed will use it to verify that the passwd file is configured as specified. The field before the colon is the resource&#8217;s <code>title</code>, which can be used to refer to the resource in other parts of the Puppet configuration.</p>
+
+<p>For simple resources that don&#8217;t vary much, a single name is sufficient. However, what happens if a filename is different between operating systems? For these cases, Puppet allows you to specify a local name in addition to the title:</p>
+
+<pre><code>file { &#39;sshdconfig&#39;:
+    name =&gt; $operatingsystem ? {
+        solaris =&gt; &#39;/usr/local/etc/ssh/sshd_config&#39;,
+        default =&gt; &#39;/etc/ssh/sshd_config&#39;,
+    },
+    owner =&gt; root,
+    group =&gt; root,
+    mode  =&gt; 644,
+}</code></pre>
+
+<p>By using the title, which is always the same, it&#8217;s easy to refer to the file resource elsewhere in our configuration without having to repeat that OS specific logic.</p>
+
+<p>For instance, let&#8217;s add a service that depends on the file:</p>
+
+<pre><code>service { &#39;sshd&#39;:
+    subscribe =&gt; File[sshdconfig],
+}</code></pre>
+
+<p>This will cause the <code>sshd</code> service to get restarted when the <code>sshdconfig</code> file changes. You&#8217;ll notice that when we reference a resource we capitalise the name of the resource, for example <code>File[sshdconfig]</code>. When you see an uppercase resource type, that&#8217;s always a reference. A lowercase version is a declaration. Since resources can only be declared once, repeating the same declaration twice will cause an error. This is an important feature of Puppet that makes sure your configuration is well modelled.</p>
+
+<p>What happens if our resource depends on multiple resources? From Puppet version 0.24.6 you can specify multiple relationships like so:</p>
+
+<pre><code>service { &#39;sshd&#39;:
+    require =&gt; File[&#39;sshdconfig&#39;, &#39;sshconfig&#39;, &#39;authorized_keys&#39;]</code></pre>
+
+<p>It&#8217;s important to note here that the title alone identifies the resource. Even if the resource seems to conceptually point to the same entity, it&#8217;s the title that matters. The following is possible in Puppet, but is to be avoided as it can lead to errors once things get sent down to the client.</p>
+
+<pre><code>file { &#39;sshdconfig&#39;:
+    name  =&gt; &#39;/usr/local/etc/ssh/sshd_config&#39;,
+    owner =&gt; &#39;root&#39;,
+}
+
+file { &#39;/usr/local/etc/ssh/sshd_config&#39;:
+    owner =&gt; &#39;sshd&#39;,
+}</code></pre>
+
+<h3 id='metaparameters'>Metaparameters</h3>
+
+<p>In addition to the attributes specific to each Resource Type Puppet also has global attributes called metaparameters. Metaparameters are parameters that work with any resource type.</p>
+
+<p>In the examples in the section above we used two metaparameters, <code>subscribe</code> and <code>require</code>, both of which build relationships between resources. You can see the full list of all metaparameters in the <a href='/references/stable/metaparameters.html'>Metaparameter Reference</a>, though we&#8217;ll point out additional ones we use as we continue the tutorial.</p>
+
+<h4 id='chaining_resources'>Chaining resources</h4>
+
+<p>Since Puppet version 2.6 it has also been possible to chain together resources:</p>
+
+<pre><code>Package[&#39;sudo&#39;] -&gt; File[&#39;sshdconfig&#39;] =&gt; Service[&#39;sshd&#39;]</code></pre>
+
+<p>You can now also specify relationships directly in the language:</p>
+
+<p>File<span>/foo</span> -&gt; Service<span>bar</span></p>
+
+<p>Specifies a normal dependency while:</p>
+
+<p>File<span>/foo</span> ~&gt; Service<span>bar</span></p>
+
+<p>Specifies a subscription.</p>
+
+<p>You can also do relationship chaining, specifying multiple relationships on a single line:</p>
+
+<p>File<span>/foo</span> -&gt; Package<span>baz</span> -&gt; Service<span>bar</span></p>
+
+<p>Note that while it&#8217;s confusing, you don&#8217;t have to have all of the arrows be the same direction:</p>
+
+<p>File<span>/foo</span> -&gt; Service<span>bar</span> &lt;- Package<span>baz</span></p>
+
+<p>This can provide some succinctness at the cost of readability.</p>
+
+<p>You can also specify full resources, rather than just resource refs:</p>
+
+<pre><code>file { &quot;/foo&quot;: ensure =&gt; present } -&gt; package { bar: ensure =&gt; installed } </code></pre>
+
+<p>But wait! There&#8217;s more! You can also specify a subscription on either side of the relationship marker:</p>
+
+<pre><code>yumrepo { foo: .... } 
+package { bar: provider =&gt; yum, ... }
+Yumrepo &lt;| |&gt; -&gt; Package &lt;| provider == yum |&gt;</code></pre>
+
+<p>This, finally, provides easy many to many relationships in Puppet, but it also opens the door to massive dependency cycles. This last feature is a very powerful stick, and you can considerably hurt yourself with it.</p>
+
+<h3 id='resource_defaults'>Resource Defaults</h3>
+
+<p>Sometimes you will need to specify a default parameter value for a set of resources; Puppet provides a syntax for doing this, using a capitalized resource specification that has no title. For instance, in the example below, we&#8217;ll set the default path for all execution of commmands:</p>
+
+<pre><code>Exec { path =&gt; &#39;/usr/bin:/bin:/usr/sbin:/sbin&#39; }
+exec { &#39;echo this works&#39;: }</code></pre>
+
+<p>The first statement in this snippet provides a default value for <code>exec</code> resources; Exec resources require either fully qualified paths or a path in which to look for the executable. Individual resources can still override this path when needed, but this saves typing. This way you can specify a single default path for your entire configuration, and then override that value as necessary.</p>
+
+<p>Defaults work with any resource type in Puppet.</p>
+
+<p>Defaults are not global &#8211; they only affect the current scope and scopes below the current one. If you want a default setting to affect your entire configuration, your only choice currently is to specify them outside of any class. We&#8217;ll mention classes in the next section.</p>
+
+<h3 id='resource_collections'>Resource Collections</h3>
+
+<p>Aggregation is a powerful concept in Puppet. There are two ways to combine multiple resources into one easier to use resource: Classes and definitions. Classes model fundamental aspects of nodes, they say &#8220;this node IS a webserver&#8221; or &#8220;this node is one of these&#8221;. In programming terminology classes are singletons &#8211; they only ever get evaluated once per node.</p>
+
+<p>Definitions, on the other hand, can be reused many times on the same node. They essentially work as if you created your own Puppet type just by using the language. They are meant to be evaluated multiple times, with different inputs each time. This means you can pass variable values into the defines.</p>
+
+<p>Both classes and defines are very useful and you should make use of them when building out your puppet infrastructure.</p>
+
+<h4 id='classes'>Classes</h4>
+
+<p>Classes are introduced with the <code>class</code> keyword, and their contents are wrapped in curly braces. The following simple example creates a simple class that manages two seperate files:</p>
+
+<pre><code>class unix {
+    file {
+        &#39;/etc/passwd&#39;: 
+            owner =&gt; &#39;root&#39;, 
+            group =&gt; &#39;root&#39;, 
+            mode  =&gt; 644;
+        &#39;/etc/shadow&#39;: 
+            owner =&gt; &#39;root&#39;, 
+            group =&gt; &#39;root&#39;, 
+            mode  =&gt; 440;
+    }
+}</code></pre>
+
+<p>You&#8217;ll notice we introduced some shorthand here. This is the same as saying:</p>
+
+<pre><code>class unix {
+    file { &#39;/etc/password&#39;:
+         owner =&gt; &#39;root&#39;, 
+         group =&gt; &#39;root&#39;, 
+         mode  =&gt; 644;
+    }
+    file { &#39;/etc/shadow&#39;:
+         owner =&gt; &#39;root&#39;, 
+         group =&gt; &#39;root&#39;, 
+         mode  =&gt; 440;
+    }
+}</code></pre>
+
+<p>Classes also support a simple form of object inheritance. For those not aquainted with programming terms, this means that we can extend the functionality of the previous class without copy/pasting the entirity of the code. Inheritance allows subclasses to override resource settings defined in parent classes. A class can only inherit from one other class, not more than one. In programming terms, this is called &#8216;single inheritance&#8217;.</p>
+
+<pre><code>class freebsd inherits unix {
+    File[&#39;/etc/passwd&#39;] { group =&gt; wheel }
+    File[&#39;/etc/shadow&#39;] { group =&gt; wheel }
+}</code></pre>
+
+<p>If we needed to undo some logic specified in a parent class, we can use undef like so:</p>
+
+<pre><code>class freebsd inherits unix {
+    File[&#39;/etc/passwd&#39;] { group =&gt; undef }
+}</code></pre>
+
+<p>In the above example, nodes which include the <code>unix</code> class will have the password file&#8217;s group set to &#8220;wheel&#8221;, while nodes including <code>freebsd</code> would have the password file group ownership left unmodified.</p>
+
+<p>In Puppet version 0.24.6 and higher, you can specify multiple overrides like so:</p>
+
+<pre><code>class freebsd inherits unix {
+    File[&#39;/etc/passwd&#39;, &#39;/etc/shadow&#39;] { group =&gt; wheel }
+}</code></pre>
+
+<p>There are other ways to use inheritance. In Puppet 0.23.1 and higher, it&#8217;s possible to add values to resource parameters using the &#8216;+&gt;&#8217; (&#8216;plusignment&#8217;) operator:</p>
+
+<pre><code>class apache {
+    service { &#39;apache&#39;: require =&gt; Package[&#39;httpd&#39;] }
+}
+
+class apache-ssl inherits apache {
+    # host certificate is required for SSL to function
+    Service[apache] { require +&gt; File[&#39;apache.pem&#39;] }
+}</code></pre>
+
+<p>The above example makes the second class require all the packages in the first, with the addition of &#8216;apache.pem&#8217;.</p>
+
+<p>To append multiple requires, use array brackets and commas:</p>
+
+<pre><code>class apache {
+    service { &#39;apache&#39;: require =&gt; Package[&#39;httpd&#39;] }
+}
+
+class apache-ssl inherits apache {
+    Service[apache] { require +&gt; [ File[&#39;apache.pem&#39;], File[&#39;/etc/httpd/conf/httpd.conf&#39;] ] }
+}</code></pre>
+
+<p>The above would make the <code>require</code> parameter in the <code>apache-ssl</code> class equal to</p>
+
+<pre><code>[Package[&#39;httpd&#39;], File[&#39;apache.pem&#39;], File[&#39;/etc/httpd/conf/httpd.conf&#39;]]</code></pre>
+
+<p>Like resources, you can also create relationships between classes with &#8216;require&#8217;, like so:</p>
+
+<pre><code>class apache {
+    service { &#39;apache&#39;: require =&gt; Class[&#39;squid&#39;] }
+}</code></pre>
+
+<p>The above example uses the <code>require</code> metaparameter to make the <code>apache</code> class dependent on the <code>squid</code> class.</p>
+
+<p>In Puppet version 0.24.6 and higher, you can specify multiple relationships like so:</p>
+
+<pre><code>class apache {
+    service { &#39;apache&#39;:
+                  require =&gt; Class[&#39;squid&#39;, &#39;xml&#39;, &#39;jakarta&#39;]</code></pre>
+
+<p>It&#8217;s not dangerous to reference a class with a require more than once. Classes are evaluated using the <code>include</code> function (which we will mention later). If a class has already been evaluated once, then <code>include</code> essentially does nothing.</p>
+
+<h5 id='qualification_of_nested_classes'>Qualification Of Nested Classes</h5>
+
+<p>Puppet allows you to nest classes inside one another as a way of achieving modularity and scoping. For example:</p>
+
+<pre><code>class myclass {
+class nested {
+    file { &#39;/etc/passwd&#39;: 
+    owner =&gt; &#39;root&#39;, 
+    group =&gt; &#39;root&#39;, 
+    mode  =&gt; 644;
+    }
+}
+}
+
+class anotherclass {
+include myclass::nested
+}</code></pre>
+
+<p>In this example, the <code>nested</code> class inside the outer <code>myclass</code> is included as <code>myclass::nested</code> inside of the class named <code>anotherclass</code>. Order is important here. Class <code>myclass</code> must be evaluated before class <code>anotherclass</code> for this example to work properly.</p>
+
+<h4 id='parameterised_classes'>Parameterised Classes</h4>
+
+<p>In Puppet release 2.6 and later, classes are extended to allow the passing of paremeters into classes.</p>
+
+<p>To create a class with parameters you can now specify:</p>
+
+<pre><code>class apache($version) {
+  ... class contents ...
+}</code></pre>
+
+<p>Classes with parameters are not added using the include function but rather the resulting class can then be included more like a definition:</p>
+
+<pre><code>node webserver {
+  class { apache: version =&gt; &quot;1.3.13&quot; }
+}</code></pre>
+
+<p>You can also specify default parameter values in your class like so:</p>
+
+<pre><code>class apache($version=&quot;1.3.13&quot;,$home=&quot;/var/www&quot;) {
+  ... class contents ...
+}</code></pre>
+
+<h4 id='definitions'>Definitions</h4>
+
+<p>Definitions follow the same basic form as classes, but they are introduced with the <code>define</code> keyword (not <code>class</code>) and they support arguments but no inheritance. As mentioned previously, defines can be reused multiple times on the same system and take parameters. Suppose we want to create a define that creates source control repositories. We probably would want to create multiple repositories on the same system, so we would use a define, not a class. Here&#8217;s an example:</p>
+
+<pre><code>define svn_repo($path) {
+    exec { &quot;/usr/bin/svnadmin create $path/$title&quot;:
+        unless =&gt; &quot;/bin/test -d $path&quot;,
+    }
+}
+
+svn_repo { puppet_repo: path =&gt; &#39;/var/svn_puppet&#39; }
+svn_repo { other_repo:  path =&gt; &#39;/var/svn_other&#39; }</code></pre>
+
+<p>Note how variables can be used within the definitions. We use dollar sign ($) variables. Note the use of the variable <code>$title</code> above. This is a bit of technical knowledge, but as of Puppet 0.22.3 and later, definitions can have both a name and a title represented by the <code>$title</code> and <code>$name</code> variables respectively. By default, <code>$title</code> and <code>$name</code> are set to the same value, but you can set a <code>title</code> attribute and pass a different name as a parameter. &#8216;$title&#8217; and &#8216;$name&#8217; only work in defines, not in classes or other resources.</p>
+
+<p>Earlier we mentioned that &#8220;metaparameters&#8221; are attributes that are available on all resource types. Defined types can also use metaparameters, for instance we can use &#8216;require&#8217; inside of a definition. We can reference the values of those metaparameters using built-in variables. Here&#8217;s an example:</p>
+
+<pre><code>define svn_repo($path) {
+    exec {&quot;create_repo_${name}&quot;: 
+        command =&gt; &quot;/usr/bin/svnadmin create $path/$title&quot;,
+        unless =&gt; &quot;/bin/test -d $path&quot;,
+    }
+    if $require {
+        Exec[&quot;create_repo_${name}&quot;]{
+            require +&gt; $require,
+        }
+    }
+}
+
+svn_repo { puppet: 
+   path =&gt; &#39;/var/svn&#39;,
+   require =&gt; Package[subversion],
+}</code></pre>
+
+<p>The above is perhaps not a perfect example, as most likely we&#8217;d know that subversion was always required for svn checkouts. However you can see from the above how it&#8217;s possible to use defined types with requires and other metaparameters.</p>
+
+<h4 id='classes_vs_definitions'>Classes vs. Definitions</h4>
+
+<p>Classes and definitions are created similarly (although classes do not accept parameters), but they are used very differently.</p>
+
+<p>Definitions are used to define reusable objects which will have multiple instances on a given host, so they cannot include any resources that will only have one instance. For instance, multiple uses of the same define cannot create the same file.</p>
+
+<p>Classes, on the other hand, are guaranteed to be singletons &#8211; you can include them as many times as you want and you&#8217;ll only ever get one copy of the resources.</p>
+
+<p>Most often, services will be defined in a class, where the service&#8217;s package, configuration files, and running service will all be defined in the class, because there will normally be one copy of each on a given host. (This idiom is sometimes referred to as &#8220;service-package-file&#8221;).</p>
+
+<p>Definitions would be used to manage resources like virtual hosts, of which you can have many, or to encode some simple information in a reusable wrapper to save typing.</p>
+
+<h4 id='modules'>Modules</h4>
+
+<p>You can (and should!) combine collections of classes, definitions and resources into modules. Modules are portable collections of configuration, for example a module might contain all the resources required to configure Postfix or Apache. You can find out more on the <a href='./modules.html'>Modules Page</a></p>
+
+<h3 id='nodes'>Nodes</h3>
+
+<p>Having knowledge of resources, classes, defines, and modules gets you to understanding of most of Puppet. Nodes are a very simple remaining step, which are how we map the what we define (&#8220;this is what a webserver looks like&#8221;) to what machines are chosen to fulfill those instructions.</p>
+
+<p>Node definitions look just like classes, including supporting inheritance, but they are special in that when a node (a managed computer running puppetd) connects to the Puppet master daemon, its name will be looked for in the list of defined nodes. The information found for the node will then be evaluated for that node, and then node will be sent that configuration.</p>
+
+<p>Node names can be the short host name, or the fully qualified domain name (FQDN). Some names, especially fully qualified ones, need to be quoted, so it is a best practice to quote all of them. Here&#8217;s an example:</p>
+
+<pre><code>node &#39;www.testing.com&#39; {
+   include common 
+   include apache, squid
+}</code></pre>
+
+<p>The previous node definition creates a node called <code>www.testing.com</code> and includes the <code>common</code>, <code>apache</code> and <code>squid</code> classes.</p>
+
+<p>You can also specify that multiple nodes recieve an indentical configuration by seperating each with a comma:</p>
+
+<pre><code>node &#39;www.testing.com&#39;, &#39;www2.testing.com&#39;, &#39;www3.testing.com&#39; {
+   include common 
+   include apache, squid
+}</code></pre>
+
+<p>The previous examples creates three identical nodes: <code>www.testing.com</code>, <code>www2.testing.com</code>, and <code>www3.testing.com</code>.</p>
+
+<h4 id='matching_nodes_with_regular_expressions'>Matching Nodes with Regular Expressions</h4>
+
+<p>In Puppet 0.25.0 and later, nodes can also be matched by regular expressions, which is much more convient than listing them individually, one-by-one:</p>
+
+<pre><code>node /^www\d+$/ {
+    include common
+}</code></pre>
+
+<p>The above would match any host called <code>www</code> and ending with one or more digits. Here&#8217;s another example:</p>
+
+<pre><code>node /^(foo|bar)\.testing\.com$/ {
+    include common
+}</code></pre>
+
+<p>The above example would match either host <code>foo</code> or <code>bar</code> in the testing.com domain.</p>
+
+<p>What happens if there are multiple regular expressions or node definitions set in the same file?</p>
+
+<ul>
+<li>If there is a node without a regular expression that matches the current client connecting, that will be used first.</li>
+
+<li>Otherwise the first matching regular expression wins.</li>
+</ul>
+
+<h4 id='node_inheritance'>Node Inheritance</h4>
+
+<p>Nodes support a limited inheritance model. Like classes, nodes can only inherit from one other node:</p>
+
+<pre><code>node &#39;www2.testing.com&#39; inherits &#39;www.testing.com&#39; {
+    include loadbalancer
+}</code></pre>
+
+<p>In this node definition the <code>www2.testing.com</code> inherits any configuration specified for the <code>www.testing.com</code> node in addition to including the <code>loadbalancer</code> class. In other words, it does everything &#8220;www.testing.com&#8221; does, but also takes on some additional functionality.</p>
+
+<h4 id='default_nodes'>Default Nodes</h4>
+
+<p>If you create a node named <code>default</code>, the node configuration for default will be used if no other node matches are found.</p>
+
+<h4 id='external_nodes'>External Nodes</h4>
+
+<p>In some cases you may already have an external list of machines and what roles they perform. This may be in LDAP, version control, or a database. You may also need to pass some variables to those nodes (more on variables later).</p>
+
+<p>In these cases, writing an <a href='./external_nodes.html'>External Nodes</a> script can help, and that can take the place of your node definitions. See that section for more information.</p>
+
+<h2 id='additional_language_features'>Additional Language Features</h2>
+
+<p>We&#8217;ve already gone over features such as ordering and grouping, though there&#8217;s still a few more things to learn.</p>
+
+<p>Puppet is not a programming language, it is a way of describing your IT infrastructure as a model. This is usually quite sufficient to get the job done, and prevents you from having to write a lot of programming code.</p>
+
+<h3 id='quoting'>Quoting</h3>
+
+<p>Most of the time, you don&#8217;t have to quote strings in Puppet. Any alphanumeric string starting with a letter (hyphens are also allowed), can leave out the quotes, though it&#8217;s a best practice to quote strings for any non-native value.</p>
+
+<h3 id='variable_interpolation_with_quotes'>Variable Interpolation With Quotes</h3>
+
+<p>So far, we&#8217;ve mentioned variables in terms of defines. If you need to use those variables within a string, use double quotes, not single quotes. Single-quoted strings will not do any variable interpolation, double-quoted strings will. Variables in strings can also be bracketed with <code>{}</code> which makes them easier to use together, and also a bit cleaner to read:</p>
+
+<pre><code>$value = &quot;${one}${two}&quot;</code></pre>
+
+<p>To put a quote character or <code>$</code> in a double-quoted string where it would normally have a special meaning, precede it with an escaping <code>\</code>. For an actual <code>\</code>, use <code>\\</code>.</p>
+
+<p>We recommend using single quotes for all strings that do not require variable interpolation. Use double quotes for those strings that require variable interpolation.</p>
+
+<h3 id='capitalization'>Capitalization</h3>
+
+<p>Capitalization of resources is used in two major ways:</p>
+
+<ul>
+<li>
+<p>Referencing: when you want to reference an already declared resource, usually for dependency purposes, you have to capitalize the name of the resource, for example, <code>require =&gt; File[sshdconfig]</code>.</p>
+</li>
+
+<li>
+<p>Inheritance. when overwriting the resource settings of a parent class from a subclass, use the uppercase versions of the resource names. Using the lowercase versions will result in an error. See the inheritance section above for an example of this.</p>
+</li>
+
+<li>
+<p>Setting default attribute values: Resource Defaults. As mentioned prev iously, using a capitalized resource with no &#8216;title&#8217; works to set the d efaults for that resource. Our previous example was setting the defaul t path for command executions.</p>
+</li>
+</ul>
+
+<h3 id='arrays'>Arrays</h3>
+
+<p>As mentioned in the class and resource examples above, Puppet allows usage of arrays in various areas. Arrays are defined in puppet look like this:</p>
+
+<pre><code>[ &#39;one&#39;, &#39;two&#39;, &#39;three&#39; ]</code></pre>
+
+<p>Several type members, such as &#8216;alias&#8217; in the &#8216;host&#8217; definition definition accept arrays as their value. A host resource with multiple aliases would look like this:</p>
+
+<pre><code>host { &#39;one.example.com&#39;:
+    alias  =&gt; [ &#39;satu&#39;, &#39;dua&#39;, &#39;tiga&#39; ],
+    ip     =&gt; &#39;192.168.100.1&#39;,
+    ensure =&gt; present,
+}</code></pre>
+
+<p>This would add a host &#8216;one.example.com&#8217; to the hosts list with the three aliases &#8216;satu&#8217;, &#8216;dua&#8217;, and &#8216;tiga&#8217;.</p>
+
+<p>Or, for example, if you want a resource to require multiple other resources, the way to do this would be like this:</p>
+
+<pre><code>resource { &#39;baz&#39;:
+    require  =&gt; [ Package[&#39;foo&#39;], File[&#39;bar&#39;] ],
+}</code></pre>
+
+<p>Another example for array usage is to call a custom defined resource multiple times, like this:</p>
+
+<pre><code>define php::pear() {
+    package { &quot;`php-${name}&quot;: ensure =&gt; installed }
+}
+
+php::pear { [&#39;ldap&#39;, &#39;mysql&#39;, &#39;ps&#39;, &#39;snmp&#39;, &#39;sqlite&#39;, &#39;tidy&#39;, &#39;xmlrpc&#39;]: }</code></pre>
+
+<p>Of course, this can be used for native types as well:</p>
+
+<pre><code>file { [ &#39;foo&#39;, &#39;bar&#39;, &#39;foobar&#39; ]:
+    owner =&gt; root,
+    group =&gt; root,
+    mode  =&gt; 600,
+}</code></pre>
+
+<h3 id='hashes'>Hashes</h3>
+
+<p>Since Puppet version 2.6, hashes have been supported in the language. These hashes are defined like Ruby hashes using the form:</p>
+
+<pre><code>hash: { key1 =&gt; val1, ... }</code></pre>
+
+<p>The hash keys are strings, but hash values can be any possible RHS values allowed in the language like function calls, variables, etc.</p>
+
+<p>It is possible to assign hashes to a variable like so:</p>
+
+<pre><code>$myhash = { key1 =&gt; &quot;myval&quot;, key2 =&gt; $b }</code></pre>
+
+<p>And to access hash members (recursively) from a variable containing a hash (this also works for arrays too):</p>
+
+<pre><code>$myhash = { key =&gt; { subkey =&gt; &quot;b&quot; }}
+notice($myhash[key][subjey]]</code></pre>
+
+<p>You can also use a hash member as a resource title, as a default definition parameter, or potentially as the value of a resource parameter,</p>
+
+<h3 id='variables'>Variables</h3>
+
+<p>Puppet supports variables like most other languages you may be familiar with. Puppet variables are denoted with <code>$</code>:</p>
+
+<pre><code>$content = &#39;some content\n&#39;
+
+file { &#39;/tmp/testing&#39;: content =&gt; $content }</code></pre>
+
+<p>Puppet language is a declarative language, which means that its scoping and assignment rules are somewhat different than a normal imperative language. The primary difference is that you cannot change the value of a variable within a single scope, because that would rely on order in the file to determine the value of the variable. Order does not matter in a declarative language. Doing so will result in an error:</p>
+
+<pre><code>$user = root
+file { &#39;/etc/passwd&#39;:
+    owner =&gt; $user,
+}
+$user = bin
+file { &#39;/bin&#39;:
+    owner   =&gt; $user,
+    recurse =&gt; true,
+}</code></pre>
+
+<p>Rather than reassigning variables, instead use the built in conditionals:</p>
+
+<pre><code>$group = $operatingsystem ? {
+    solaris =&gt; &#39;sysadmin&#39;,
+    default =&gt; &#39;wheel&#39;,
+}</code></pre>
+
+<p>A variable may only be assigned once per scope. However you still can set the same variable in non-overlapping scopes. For example, to set top-level configuration values:</p>
+
+<pre><code>node a {
+    $setting = &#39;this&#39;
+    include class_using_setting
+}
+node b {
+    $setting = &#39;that&#39;
+    include class_using_setting
+}</code></pre>
+
+<p>In the above example, nodes &#8220;a&#8221; and &#8220;b&#8221; have different scopes, so this is not reassignment of the same variable.</p>
+
+<h4 id='variable_scope'>Variable Scope</h4>
+
+<p>Scoping may initially seem like a foreign concept, though in reality it is pretty simple. A scope defines where a variable is valid. Unlike early programming languages like BASIC, variables are only valid and accessible in certain places in a program. Using the same variable name in different parts of the language do not refer to the same value.</p>
+
+<p>Classes, components, and nodes introduce a new scope. Puppet is currently dynamically scoped, which means that scope hierarchies are created based on where the code is evaluated instead of where the code is defined.</p>
+
+<p>For example:</p>
+
+<pre><code>$test = &#39;top&#39;
+class myclass {
+    exec { &quot;/bin/echo $test&quot;: logoutput =&gt; true }
+}
+
+class other {
+    $test = &#39;other&#39;
+    include myclass
+}
+
+include other</code></pre>
+
+<p>In this case, there&#8217;s a top-level scope, a new scope for <code>other</code>, and the a scope below that for <code>myclass</code>. When this code is evaluated, <code>$test</code> evaluates to <code>other</code>, not <code>top</code>.</p>
+
+<h4 id='qualified_variables'>Qualified Variables</h4>
+
+<p>Puppet supports qualification of variables inside a class. This allows you to use variables defined in other classes.</p>
+
+<p>For example:</p>
+
+<pre><code>class myclass {
+    $test = &#39;content&#39;
+}
+
+class anotherclass {
+    $other = $myclass::test
+}</code></pre>
+
+<p>In this example, the value of the <code>$other</code> variable evaluates to <code>content</code>. Qualified variables are read-only &#8211; you can not set a variable&#8217;s value from other class.</p>
+
+<p>Variable qualification is dependent on the evaluation order of your classes. Class <code>myclass</code> must be evaluated before class <code>anotherclass</code> for variables to be set correctly.</p>
+
+<h4 id='facts_as_variables'>Facts as Variables</h4>
+
+<p>In addition to user-defined variables, the facts generated by Facter are also available as variables. This allows values that you would see by running <code>facter</code> on a client system within Puppet manifests and also within Puppet templates. To use a fact as a variable prefix the name of the fact with <code>$</code>. For example, the value of the <code>operatingsystem</code> and <code>puppetversion</code> facts would be available as the variables <code>$operatingsystem</code> and <code>$puppetversion</code>.</p>
+
+<h4 id='variable_expressions'>Variable Expressions</h4>
+
+<p>In Puppet 0.24.6 and later, arbitrary expressions can be assigned to variables, for example:</p>
+
+<pre><code>$inch_to_cm = 2.54
+$rack_length_cm = 19 * $inch_to_cm
+$gigabyte = 1024 * 1024 * 1024
+$can_update = ($ram_gb * $gigabyte) &gt; 1 &lt;&lt; 24</code></pre>
+
+<p>See the Expression section later on this page for further details of the expressions that are now available.</p>
+
+<h4 id='appending_to_variables'>Appending to Variables</h4>
+
+<p>In Puppet 0.24.6 and later, values can be appended to array variables:</p>
+
+<pre><code>$ssh_users = [ &#39;myself&#39;, &#39;someone&#39; ]
+
+class test {
+   $ssh_users += [&#39;someone_else&#39;]
+}</code></pre>
+
+<p>Here the <code>$ssh_users</code> variable contains an array with the elements <code>myself</code> and <code>someone</code>. Using the variable append syntax, <code>+=</code>, we added another element, <code>someone_else</code> to the array.</p>
+
+<h3 id='conditionals'>Conditionals</h3>
+
+<p>At some point you&#8217;ll need to use a different value based on the value of a variable, or decide to not do something if a particular value is set.</p>
+
+<p>Puppet currently supports two types of conditionals:</p>
+
+<ul>
+<li>The <em>selector</em> which can only be used within resources to pick the correct value for an attribute, and</li>
+
+<li><em>statement conditionals</em> which can be used more widely in your manifests to include additional classes, define distinct sets of resources within a class, or make other structural decisions.</li>
+</ul>
+
+<p>Case students do not return a value. Selectors do. That is the primary difference between them and why you would use one and not the other.</p>
+
+<h4 id='selectors'>Selectors</h4>
+
+<p>If you&#8217;re familiar with programming terms, The selector syntax works like a multi-valued trinary operator, similar to C&#8217;s <code>foo = bar ? 1 : 0</code> operator where <code>foo</code> will be set to <code>1</code> if <code>bar</code> evaluates to true and <code>0</code> if <code>bar</code> is false.</p>
+
+<p>Selectors are useful to specify a resource attribute or assign a variable based on a fact or another variable. In addition to any number of specified values, selectors also allow you to specify a default if no value matches. Here&#8217;s a simple example:</p>
+
+<pre><code>file { &#39;/etc/config&#39;:
+    owner =&gt; $operatingsystem ? {
+        &#39;sunos&#39;   =&gt; &#39;adm&#39;,
+        &#39;redhat&#39;  =&gt; &#39;bin&#39;,
+        default =&gt; undef,
+    },
+}</code></pre>
+
+<p>If the <code>$operatingsystem</code> fact (sent up from &#8216;facter&#8217;) returns <code>sunos</code> or <code>redhat</code> then the ownership of the file is set to <code>adm</code> or <code>bin</code> respectively. Any other result and the <code>owner</code> attribute will not be set, because it is listed as <code>undef</code>.</p>
+
+<p>Remember to quote the comparators you&#8217;re using in the selector as the lack of quotes can cause syntax errors.</p>
+
+<p>Selectors can also be used in variable assignment:</p>
+
+<pre><code>$owner = $operatingsystem ? {
+    sunos   =&gt; &#39;adm&#39;,
+    redhat  =&gt; &#39;bin&#39;,
+    default =&gt; undef,
+}</code></pre>
+
+<p>In Puppet 0.25 and later, selectors can also be used with regular expressions:</p>
+
+<pre><code>$owner = $operatingsystem ? {
+    /(redhat|debian)/   =&gt; &#39;bin&#39;,
+    default =&gt; undef,
+}</code></pre>
+
+<p>In this last example, if <code>$operatingsystem</code> value matches either redhat or debian, then <code>bin</code> will be the selected result, otherwise the owner will not be set (<code>undef</code>).</p>
+
+<p>Like Perl and some other languages with regular expression support, captures in selector regular expressions automatically create some limited scope variables (<code>$0</code> to <code>$n</code>):</p>
+
+<pre><code>$system = $operatingsystem ? {
+    /(redhat|debian)/   =&gt; &#39;our system is $1&#39;,
+    default =&gt; &#39;our system is unknown&#39;,
+}</code></pre>
+
+<p>In this last example, <code>$1</code> will get replaced by the content of the capture (here either <code>redhat</code> or <code>debian</code>).</p>
+
+<p>The variable <code>$0</code> will contain the whole match.</p>
+
+<h4 id='case_statement'>Case Statement</h4>
+
+<p><code>Case</code> is the other form of Puppet&#8217;s two conditional statements, which can be wrapped around any Puppet code to add decision-making logic to your manifests. Case statements, unlike selectors, do not return a value. A common use for the <code>case</code> statement is to apply different classes to a particular node based on its operating system:</p>
+
+<pre><code>case $operatingsystem {
+    sunos:   { include solaris } # apply the solaris class
+    redhat:  { include redhat  } # apply the redhat class
+    default: { include generic } # apply the generic class
+}</code></pre>
+
+<p>Case statements can also specify multiple match conditions by separating each with a comma:</p>
+
+<pre><code>case $hostname {
+    jack,jill:      { include hill    } # apply the hill class
+    humpty,dumpty:  { include wall    } # apply the wall class
+    default:        { include generic } # apply the generic class
+}</code></pre>
+
+<p>Here, if the <code>$hostname</code> fact returns either <code>jack</code> or <code>jill</code> the <code>hill</code> class would be included.</p>
+
+<p>In Puppet 0.25 and later, the <code>case</code> statement also supports regular expressions:</p>
+
+<pre><code>case $hostname {
+    /^j(ack|ill)$/:   { include hill    } # apply the hill class
+    /^[hd]umpty$/:    { include wall    } # apply the wall class
+    default:          { include generic } # apply the generic class
+}</code></pre>
+
+<p>In this last example, if <code>$hostname</code> matches either <code>jack</code> or <code>jill</code>, then the <code>hill</code> class will be included. But if <code>$hostname</code> matches either <code>humpty</code> or <code>dumpty</code>, then the <code>wall</code> class will be included.</p>
+
+<p>As with selectors (see above), regular expressions captures are also available. These create limited scope variables <code>$0</code> to <code>$n</code>:</p>
+
+<pre><code>case $hostname {
+    /^j(ack|ill)$/:   { notice(&#39;Welcome $1!&#39;) } 
+    default:          { notice(&#39;Welcome stranger&#39;) }
+}</code></pre>
+
+<p>In this last example, if <code>$host</code> is <code>jack</code> or <code>jill</code> then a notice message will be logged with <code>$1</code> replaced by either <code>ack</code> or <code>ill</code>. <code>$0</code> contains the whole match.</p>
+
+<h4 id='ifelse_statement'>If/Else Statement</h4>
+
+<p><code>if/else</code> provides branching options based on the truth value of a variable:</p>
+
+<pre><code>if $variable {
+    file { &#39;/some/file&#39;: ensure =&gt; present }
+} else {
+    file { &#39;/some/other/file&#39;: ensure =&gt; present }
+}</code></pre>
+
+<p>In Puppet 0.24.6 and later, the <code>if</code> statement can also branch based on the value of an expression:</p>
+
+<pre><code>if $server == &#39;mongrel&#39; {
+    include mongrel
+} else {
+    include nginx
+}</code></pre>
+
+<p>In the above example, if the value of the variable <code>$server</code> is equal to <code>mongrel</code>, Puppet will include the class <code>mongrel</code>, otherwise it will include the class <code>nginx</code>.</p>
+
+<p>From version 2.6 and later an <code>elsif</code> construct was introduced into the language:</p>
+
+<p>if $server == &#8216;mongrel&#8217; { include mongrel } elsif $server == &#8216;nginx&#8217; { include nginx } else { include thin }</p>
+
+<p>Arithmetic expressions are also possible, for example:</p>
+
+<pre><code>if $ram &gt; 1024 {
+    $maxclient = 500
+}</code></pre>
+
+<p>In the previous example if the value of the variable <code>$ram</code> is greater than <code>1024</code>, Puppet will set the value of the <code>$maxclient</code> variable to <code>500</code>.</p>
+
+<p>More complex expressions combining arithmetric expressions with the Boolean operators <code>and</code>, <code>or</code>, or <code>not</code> are also possible:</p>
+
+<pre><code>if ( $processor_count &gt; 2 ) and (( $ram &gt;= 16 * $gigabyte ) or ( $disksize &gt; 1000 )) {
+include for_big_irons
+} else {
+include for_small_box
+}</code></pre>
+
+<p>See the Expression section further down for more information on expressions.</p>
+
+<h3 id='virtual_resources'>Virtual Resources</h3>
+
+<p>See <a href='./virtual_resources.html'>Virtual Resources</a>.</p>
+
+<p>Virtual resources are available in Puppet 0.20.0 and later.</p>
+
+<p>Virtual resources are resources that are not sent to the client unless <code>realized</code>.</p>
+
+<p>The syntax for a virtual resource is:</p>
+
+<pre><code>@user { luke: ensure =&gt; present }</code></pre>
+
+<p>The user luke is now defined virtually. To realize that definition, you can use a <code>collection</code>:</p>
+
+<pre><code>User &lt;| title == luke |&gt;</code></pre>
+
+<p>This can be read as &#8216;the user whose title is luke&#8217;. This is equivalent to using the <code>realize</code> function:</p>
+
+<pre><code>realize User[luke]</code></pre>
+
+<p>Realization could also use other criteria, such as realizing Users that match a certain group, or using a metaparameter like &#8216;tag&#8217;.</p>
+
+<p>The motivation for this feature is somewhat complicated; please see the <a href='./virtual_resources.html'>Virtual Resources</a> page for more information.</p>
+
+<h3 id='exported_resources'>Exported Resources</h3>
+
+<p>Exported resources are an extension of virtual resources used to allow different hosts managed by Puppet to influence each other&#8217;s Puppet configuration. This is described in detail on the <a href='./exported_resources.html'>Exported Resources</a> page. As with virtual resources, new syntax was added to the language for this purpose.</p>
+
+<p>The key syntactical difference between virtual and exported resources is that the special sigils (@ and &lt;| |&gt;) are doubled (@@ and &#171;| |&#187;) when referring to an exported resource.</p>
+
+<p>Here is an example with exported resources that shares SSH keys between clients:</p>
+
+<pre><code>class ssh {
+@@sshkey { $hostname: type =&gt; dsa, key =&gt; $sshdsakey }
+    Sshkey &lt;&lt;| |&gt;&gt;
+}</code></pre>
+
+<p>In the above example, notice that fulfillment and exporting are used together, so that any node that gets the &#8216;sshkey&#8217; class will have all the ssh keys of other hosts. This could be done differently so that the keys could be realized on different hosts.</p>
+
+<p>To actually work, the <code>storeconfig</code> parameter must be set to <code>true</code> in puppet.conf. This allows configurations from client to be stored on the central server.</p>
+
+<p>The details of this feature are somewhat complicated; see the <a href='./exported_resources.html'>Exported Resources</a> page for more information.</p>
+
+<h3 id='reserved_words__acceptable_characters'>Reserved words &amp; Acceptable characters</h3>
+
+<p>You can use the characters A-Z, a-z, 0-9 and underscores in variables, resources and class names. In Puppet releases prior to 0.24.6, you cannot start a class name with a number.</p>
+
+<p>Any word that the syntax uses for special meaning is a reserved word, meaning you cannot use it for variable or type names. Words like <code>true</code>, <code>define</code>, <code>inherits</code>, and <code>class</code> are all reserved. If you ever need to use a reserved word as a value, be sure to quote it.</p>
+
+<h3 id='comments'>Comments</h3>
+
+<p>Puppet supports two types of comments:</p>
+
+<ul>
+<li>Unix shell style comments; they can either be on their own line or at the end of a line.</li>
+
+<li>multi-line C-style comments (available in Puppet 0.24.7 and later)</li>
+</ul>
+
+<p>Here is a shell style comment:</p>
+
+<pre><code># this is a comment</code></pre>
+
+<p>You can see an example of a multi-line comment:</p>
+
+<pre><code>/*
+this is a comment
+*/</code></pre>
+
+<h2 id='expressions'>Expressions</h2>
+
+<p>Starting with version 0.24.6 the Puppet language supports arbitrary expressions in <code>if</code> statement boolean tests and in the right hand value of variable assignments.</p>
+
+<p>Puppet expressions can be composed of:</p>
+
+<ul>
+<li>boolean expressions, which are combination of other expressions combined by boolean operators (<code>and</code>, <code>or</code> and <code>not</code>)</li>
+
+<li>comparison expressions, which consist of variables, numerical operands or other expressions combined with comparison operators ( <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>)</li>
+
+<li>arithmetic expressions, which consists of variables, numerical operands or other expressions combined with the following arithmetic operators: <code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code></li>
+
+<li>and in Puppet 0.25 and later, regular expression matches with the help of the regex match operator: <code>=~</code> and <code>!~</code></li>
+</ul>
+
+<p>Expressions can be enclosed in parenthesis, <code>()</code>, to group expressions and resolve operator ambiguity.</p>
+
+<h3 id='operator_precedence'>Operator precedence</h3>
+
+<p>The Puppet operator precedence conforms to the standard precedence in most systems, from highest to lowest:</p>
+
+<pre><code>! -&gt; not
+* / -&gt; times and divide
+- + -&gt; minus, plus
+&lt;&lt; &gt;&gt; -&gt; left shift and right shift
+== != -&gt; not equal, equal
+&gt;= &lt;= &gt; &lt; -&gt; greater equal, less or equal, greater than, less than
+and
+or</code></pre>
+
+<h3 id='expression_examples'>Expression examples</h3>
+
+<h4 id='comparison_expressions'>Comparison expressions</h4>
+
+<p>Comparison expressions include tests for equality using the <code>==</code> expression:</p>
+
+<pre><code>if $variable == &#39;foo&#39; {
+    include bar
+} else {
+    include foobar
+}</code></pre>
+
+<p>Here if <code>$variable</code> has a value of <code>foo</code>, Puppet will then include the <code>bar</code> class, otherwise it will include the <code>foobar</code> class.</p>
+
+<p>Here is another example shows the use of the <code>!=</code> (&#8216;not equal&#8217;) comparison operator:</p>
+
+<pre><code>if $variable != &#39;foo&#39; {
+    $othervariable = &#39;bar&#39;
+} else {
+    $othervariable = &#39;foobar&#39;
+}</code></pre>
+
+<p>In our second example if <code>$variable</code> is not equal to a value of <code>foo</code>, Puppet will then set the value of the <code>$othervariable</code> variable to <code>bar</code>, otherwise it will set the <code>$othervariable</code> variable to <code>foobar</code>.</p>
+
+<h4 id='arithmetic_expressions'>Arithmetic expressions</h4>
+
+<p>You can also perform a variety of arithmetic expressions, for example:</p>
+
+<pre><code>$one = 1
+$one_thirty = 1.30
+$two = 2.034e-2
+    
+$result = ((( $two + 2) / $one_thirty) + 4 * 5.45) - (6 &lt;&lt; ($two + 4)) + (0x800 + -9)</code></pre>
+
+<h4 id='boolean_expressions'>Boolean expressions</h4>
+
+<p>Boolean expressions are also possible using <code>or</code>, <code>and</code> and <code>not</code>:</p>
+
+<pre><code>$one = 1
+$two = 2
+$var = ( $one &lt; $two ) and ( $one + 1 == $two )</code></pre>
+
+<h4 id='regular_expressions'>Regular expressions</h4>
+
+<p>In Puppet 0.25 and later, Puppet supports regular expression matching using <code>=~</code> (match) and <code>!~</code> (not-match) for example:</p>
+
+<pre><code>if $host =~ /^www(\d+)\./ {
+    notice(&#39;Welcome web server #$1&#39;)
+}</code></pre>
+
+<p>Like case and selectors, the regex match operators create limited scope variables for each regex capture. In the previous example, <code>$1</code> will be replaced by the number following <code>www</code> in <code>$host</code>. Those variables are valid only for the statements inside the braces of the if clause.</p>
+
+<h3 id='backus_naur_form'>Backus Naur Form</h3>
+
+<p>We&#8217;ve already covered the list of opeartors, though if you wish to see it, here&#8217;s the available operators in Backus Naur Form:</p>
+
+<pre><code>&lt;exp&gt; ::=  &lt;exp&gt; &lt;arithop&gt; &lt;exp&gt;
+         | &lt;exp&gt; &lt;boolop&gt; &lt;exp&gt;
+         | &lt;exp&gt; &lt;compop&gt; &lt;exp&gt;
+         | &lt;exp&gt; &lt;matchop&gt; &lt;regex&gt;
+         | ! &lt;exp&gt;
+         | - &lt;exp&gt;
+         | &quot;(&quot; &lt;exp&gt; &quot;)&quot;
+         | &lt;rightvalue&gt;
+
+&lt;arithop&gt; ::= &quot;+&quot; | &quot;-&quot; | &quot;/&quot; | &quot;*&quot; | &quot;&lt;&lt;&quot; | &quot;&gt;&gt;&quot;
+&lt;boolop&gt;  ::= &quot;and&quot; | &quot;or&quot;  
+&lt;compop&gt;  ::= &quot;==&quot; | &quot;!=&quot; | &quot;&gt;&quot; | &quot;&gt;=&quot; | &quot;&lt;=&quot; | &quot;&lt;&quot;
+&lt;matchop&gt;  ::= &quot;=~&quot; | &quot;!~&quot;
+
+&lt;rightvalue&gt; ::= &lt;variable&gt; | &lt;function-call&gt; | &lt;literals&gt;
+&lt;literals&gt; ::= &lt;float&gt; | &lt;integer&gt; | &lt;hex-integer&gt; | &lt;octal-integer&gt; | &lt;quoted-string&gt;
+&lt;regex&gt; ::= &#39;/regex/&#39;</code></pre>
+
+<h2 id='functions'>Functions</h2>
+
+<p>Puppet supports many built in functions; see the <a href='/references/stable/function.html'>Function Reference</a> for details &#8211; see <a href='/guides/custom_functions.html'>Custom Functions</a> for information on how to create your own custom functions.</p>
+
+<p>Some functions can be used as a statement:</p>
+
+<pre><code>notice(&#39;Something weird is going on&#39;)</code></pre>
+
+<p>(The notice function above is an example of a function that will log on the server)</p>
+
+<p>Or without parentheses:</p>
+
+<pre><code>notice &#39;Something weird is going on&#39;</code></pre>
+
+<p>Some functions instead return a value:</p>
+
+<pre><code>file { &#39;/my/file&#39;: content =&gt; template(&#39;mytemplate.erb&#39;) }</code></pre>
+
+<p>All functions run on the puppetmaster (central server), so you only have access to the filesystem and resources on that host from your functions. The only exception to this is that the value of any Facter facts that have been sent to the master from your clients are also at your disposal. See the <a href='./tools.html'>Tools Guide</a> for more information about these components.</p>
+
+<h2 id='importing_manifests'>Importing Manifests</h2>
+
+<p>Puppet has an <code>import</code> keyword for importing other manifests. Code in those external manifests should always be stored in a <code>class</code> or <code>definition</code> or it will be imported into the main scope and applied to all nodes. Currently files are only searched for within the same directory as the file doing the importing.</p>
+
+<p>Files can also be imported using globbing, as implemented by Ruby&#8217;s <code>Dir.glob</code> method:</p>
+
+<pre><code>import &#39;classes/*.pp&#39;
+import &#39;packages/[a-z]*.pp&#39;</code></pre>
+
+<p>Best practices calls for organizing manifests into <a href='./modules.html'>Modules</a></p>
+
+<h2 id='handling_compilation_errors'>Handling Compilation Errors</h2>
+
+<p>Puppet does not use manifests directly, it compiles them down to a internal format that the clients can understand.</p>
+
+<p>By default, when a manifest fails to compile, the previously compiled version of the Puppet manifest is used instead.</p>
+
+<p>This behavior is governed by a setting in puppet.conf &#8211; it is &#8216;usecacheonfailure&#8217; and is set by default to &#8216;true&#8217;.</p>
+
+<p>This may result in surprising behaviour if you are editing complex configurations.</p>
+
+<p>Running puppetd with <code>--no-usecacheonfailure</code> or with <code>--test</code>, or setting <code>usecacheonfailure = false</code> in the configuration file, will disable this behaviour.</p>
+            </div>
+            <div class="secondary-content">
+                    <div id="subCol">
+        <h3 class="chapter">Contents</h3>
+        <ol class="chapters">
+<li><a href="#ready_to_dive_in">Ready To Dive In?</a></li>
+<li>
+<a href="#resources">Resources</a><ul style="list-style: none;">
+<li>
+<a href="#metaparameters">Metaparameters</a><ul style="list-style: none;"><li><a href="#chaining_resources">Chaining resources</a></li></ul>
+</li>
+<li><a href="#resource_defaults">Resource Defaults</a></li>
+<li>
+<a href="#resource_collections">Resource Collections</a><ul style="list-style: none;">
+<li>
+<a href="#classes">Classes</a><ul style="list-style: none;"><li><a href="#qualification_of_nested_classes">Qualification Of Nested Classes</a></li></ul>
+</li>
+<li><a href="#parameterised_classes">Parameterised Classes</a></li>
+<li><a href="#definitions">Definitions</a></li>
+<li><a href="#classes_vs_definitions">Classes vs. Definitions</a></li>
+<li><a href="#modules">Modules</a></li>
+</ul>
+</li>
+<li>
+<a href="#nodes">Nodes</a><ul style="list-style: none;">
+<li><a href="#matching_nodes_with_regular_expressions">Matching Nodes with Regular Expressions</a></li>
+<li><a href="#node_inheritance">Node Inheritance</a></li>
+<li><a href="#default_nodes">Default Nodes</a></li>
+<li><a href="#external_nodes">External Nodes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#additional_language_features">Additional Language Features</a><ul style="list-style: none;">
+<li><a href="#quoting">Quoting</a></li>
+<li><a href="#variable_interpolation_with_quotes">Variable Interpolation With Quotes</a></li>
+<li><a href="#capitalization">Capitalization</a></li>
+<li><a href="#arrays">Arrays</a></li>
+<li><a href="#hashes">Hashes</a></li>
+<li>
+<a href="#variables">Variables</a><ul style="list-style: none;">
+<li><a href="#variable_scope">Variable Scope</a></li>
+<li><a href="#qualified_variables">Qualified Variables</a></li>
+<li><a href="#facts_as_variables">Facts as Variables</a></li>
+<li><a href="#variable_expressions">Variable Expressions</a></li>
+<li><a href="#appending_to_variables">Appending to Variables</a></li>
+</ul>
+</li>
+<li>
+<a href="#conditionals">Conditionals</a><ul style="list-style: none;">
+<li><a href="#selectors">Selectors</a></li>
+<li><a href="#case_statement">Case Statement</a></li>
+<li><a href="#ifelse_statement">If/Else Statement</a></li>
+</ul>
+</li>
+<li><a href="#virtual_resources">Virtual Resources</a></li>
+<li><a href="#exported_resources">Exported Resources</a></li>
+<li><a href="#reserved_words__acceptable_characters">Reserved words &amp; Acceptable characters</a></li>
+<li><a href="#comments">Comments</a></li>
+</ul>
+</li>
+<li>
+<a href="#expressions">Expressions</a><ul style="list-style: none;">
+<li><a href="#operator_precedence">Operator precedence</a></li>
+<li>
+<a href="#expression_examples">Expression examples</a><ul style="list-style: none;">
+<li><a href="#comparison_expressions">Comparison expressions</a></li>
+<li><a href="#arithmetic_expressions">Arithmetic expressions</a></li>
+<li><a href="#boolean_expressions">Boolean expressions</a></li>
+<li><a href="#regular_expressions">Regular expressions</a></li>
+</ul>
+</li>
+<li><a href="#backus_naur_form">Backus Naur Form</a></li>
+</ul>
+</li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#importing_manifests">Importing Manifests</a></li>
+<li><a href="#handling_compilation_errors">Handling Compilation Errors</a></li></ol></div>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+  		<footer id="footer">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <section id="newsletter">
+                <h4>Newsletter</h4>
+                <p>Stay up to date on all things puppet</p>
+                <form action="http://lfov.net/webrecorder/f" method="post" name="Newsletter">
+                  <input type="hidden" name="formid" value="3d424fd0-4204-435f-afde-aa1c4a6bc2f1"/>
+                  <input type="hidden" name="cid" value="LF_c268993e"/>
+                  <fieldset>
+                    <legend>Newsletter</legend>
+                    <label form="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                    <button type="submit">Subscribe</button>
+                  </fieldset>
+                </form>
+              </section>
+              <section id="elsewhere">
+                <h4>Elsewhere</h4>
+                <ul>
+                  <li class="chat"><a href="http://webchat.freenode.net/?channels=puppet" rel="external"><span class="indicator"></span><span>Chat with us on IRC</span></a></li>
+                  <li class="discussion"><a href="http://groups.google.com/group/puppet-users?pli=1" rel="external"><span class="indicator"></span><span>Join the Mailing List</span></a></li>
+                  <li class="facebook"><a href="http://www.facebook.com/pages/Portland-OR/Reductive-Labs/190644013795?ref=ts&v=wall" rel="external"><span class="indicator"></span><span>Become a Fan on Facebook</span></a></li>
+                  <li class="subscribe"><a href="http://feeds.feedburner.com/PuppetLabs" rel="external"><span class="indicator"></span><span>Subscribe to our blog</span></a></li>
+
+                  <li class="twitter"><a href="http://twitter.com/puppetlabs" rel="external"><span class="indicator"></span><span>Follow us on Twitter</span></a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="secondary-content">
+              <section id="book-it">
+                <h4>Get the book!</h4>
+                <p>Written by James Turnbull, <a href="http://apress.com/book/view/1590599780" rel="nofollow">Pulling Strings with Puppet</a> is the first book to introduce the powerful Puppet system administration tool. </p>
+                <img src="http://puppetlabs.com/images/book.png" />
+              </section>
+            </div>
+          </div>
+        </div>
+  		</footer>
+      <div id="copyright">
+        <div class="site-width">
+          &copy; 2010 <a href="http://puppetlabs.com/" title="Puppet Labs">Puppet Labs</a>
+          <span class="vcard">
+           <span class="org">Puppet Labs</span>
+           <a class="email" href="mailto:info@puppetlabs.com">info@puppetlabs.com</a>
+            <span class="adr">
+             <span class="street-address">222 NW Davis Street</span>
+             /
+             <span class="locality">Portland</span>, 
+             <span class="region">OR</span>
+             <span class="postal-code">97209</span>
+
+            </span>
+           <span class="tel">+1 503-805-9065</span>
+          </span>          
+        </div>
+      </div>
+    </div>
+    <!-- BEGIN: LOOPFUSE TRACKING -->
+    <script src="http://lfov.net/webrecorder/js/listen.js" type="text/Javascript"></script>
+    <script type="text/Javascript">
+    _lf_cid = "LF_c268993e";
+    _lf_remora();
+    </script>
+    <!-- END: LOOPFUSE TRACKING -->
+    
+  	<script type="text/javascript">Cufon.now();</script>
+  	<style type="text/css">h1, h2{ visibility : visible }</style>
+  	
+  </body>
+</html>

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<title>Documentation | Puppet Labs - service</title>
+  	<meta name="description" content="The open source leader in data center automation">
+  	<link rel="alternate" type="text/xml" title="Puppet Labs RSS 0.92 Feed" href="http://puppetlabs.com/feed/rss/">
+  	<link rel="alternate" type="application/atom+xml" title="Puppet Labs Atom Feed" href="http://puppetlabs.com/feed/atom/">
+  	<link rel="alternate" type="application/rss+xml" title="Puppet Labs RSS 2.0 Feed" href="http://puppetlabs.com/feed/">
+  	<link rel="pingback" href="http://puppetlabs.com/xmlrpc.php">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://puppetlabs.com/xmlrpc.php?rsd" />
+    <link rel='index' title='Puppet Labs' href='http://docs.puppetlabs.com' />
+
+<!-- Google stats -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1537572-5");
+pageTracker._setDomainName(".puppetlabs.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- End Google stats -->
+
+
+    <!-- FIXME: absolute paths -->
+
+    <script type='text/javascript' src='/files/javascripts/html5.js'></script>
+    <script type='text/javascript' src='/files/javascripts/jquery-1.3.2.min.js'></script>
+    <script type='text/javascript' src='/files/javascripts/drop_down.js'></script>
+    <script type='text/javascript' src='/files/javascripts/code_highlighter.js'></script>
+
+    <script type='text/javascript' src='/files/javascripts/cufon-yui.js'></script>
+    <script type='text/javascript' src='/files/fonts/Klavika_400-Klavika_600.font.js'></script>
+    <script type='text/javascript' src='/files/javascripts/ampersands.js'></script>
+
+
+    <!-- All in One SEO Pack 1.6.10.1 by Michael Torbert of Semper Fi Web Design[127,146] -->
+    <meta name="keywords" content="Puppet, puppet labs, reductive labs, open source, system administrator, ruby, data center, automation, support" />
+    <link rel="canonical" href="http://docs.puppetlabs.com" />
+    <!-- /all in one seo pack -->
+	
+    <!-- FIXME: absolute paths -->
+
+    <link rel="stylesheet" type="text/css" href="/files/stylesheets/style.css" media="screen"> <!-- index -->
+
+    <!--[if IE 7]>
+	  <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_7.css" media="screen"> <!-- index -->
+    <![endif]-->
+  
+    <!--[if IE 8]>
+	    <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_8.css" media="screen"> <!-- index -->
+    <![endif]-->		
+
+  	<script type="text/javascript">
+      Cufon.replace('h1, h2', { fontWeight: '600' });
+  	</script>
+</head>
+
+
+
+        
+  <body id="resources" class="docs">
+  <style type="text/css">h1, h2{ visibility : hidden }</style>		
+  <!--[if IE 8]>
+    <style type="text/css">h1, h2{ visibility : visible }</style>
+  <![endif]-->		
+
+  	<header id="header">
+      <div class="site-width">
+    		<h1><a href="http://puppetlabs.com/"><span>Puppet Labs</span></a></h1>
+        <a class="screen-reader-content" href="#content">Skip navigation</a>
+        <nav>
+      		<ul id="global-navigation">
+            <li id="puppet-tab" class="with-submenu">
+
+              <a href="http://puppetlabs.com/puppet/">
+                <span>Puppet</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>            
+                <li>
+                  <ul>
+                    <li class="page_item page-item-757"><a href="http://puppetlabs.com/puppet/introduction/" title="Introduction">Introduction</a></li>
+                    <li class="page_item page-item-769"><a href="http://puppetlabs.com/puppet/requirements/" title="Requirements">Requirements</a></li>
+                    <li class="page_item page-item-828"><a href="http://puppetlabs.com/puppet/features/" title="Features">Features</a></li>
+                    <li class="page_item page-item-956"><a href="http://puppetlabs.com/puppet/solutions/" title="Solutions">Solutions</a></li>
+                    <li class="page_item page-item-1159"><a href="http://puppetlabs.com/puppet/users/" title="Users">Users</a></li>
+                    <li class="page_item page-item-1074"><a href="http://puppetlabs.com/resources/white-papers" title="White Papers">White Papers</a></li>
+                    <li class="page_item page-item-1495"><a href="http://puppetlabs.com/resources/case-studies" title="Case Studies">Case Studies</a></li>
+                    <li class="page_item page-item-1044"><a href="http://puppetlabs.com/resources/downloads" title="Downloads">Downloads</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li class="page_item page-item-751"><a href="http://puppetlabs.com/puppet/related-projects/dashboard/" title="Dashboard">Dashboard</a></li>
+                    <li class="page_item page-item-753"><a href="http://puppetlabs.com/puppet/related-projects/facter/" title="Facter">Facter</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="services-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/services/">
+                <span>Services</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-783"><a href="http://puppetlabs.com/services/overview/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-839"><a href="http://puppetlabs.com/services/support/" title="Enterprise Support">Enterprise Support</a></li>
+                <li class="page_item page-item-845"><a href="http://puppetlabs.com/services/training-workshops/" title="On-Site Training &amp; Consulting">On-Site Training &amp; Consulting</a></li>
+                <li class="page_item page-item-849"><a href="http://puppetlabs.com/category/events/upcoming/" title="Events &amp; Public Training">Events &amp; Public Training</a></li>
+                <li class="page_item page-item-851"><a href="http://puppetlabs.com/services/partners/" title="Partners">Partners</a></li>
+                <li class="page_item page-item-1037"><a href="http://puppetlabs.com/resources/customer-support" title="Customer Support">Customer Support</a></li>
+              </ul>
+            </li>
+            <li id="resources-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/resources/">
+                <span>Resources</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-1048"><a href="http://puppetlabs.com/resources/overview-2/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-1040"><a href="http://docs.puppetlabs.com" title="Documentation">Documentation</a></li>
+                <li class="page_item page-item-872"><a href="http://puppetlabs.com/resources/downloads/" title="Downloads">Downloads</a></li>
+                <li class="page_item page-item-835"><a href="http://puppetlabs.com/resources/white-papers/" title="White Papers">White Papers</a></li>
+                <li class="page_item page-item-833"><a href="http://puppetlabs.com/resources/case-studies/" title="Case Studies">Case Studies</a></li>
+                <li class="page_item page-item-1052"><a href="http://puppetlabs.com/resources/customer-support/" title="Customer Support">Customer Support</a></li>
+              </ul>
+
+            </li>
+            <li id="community-tab">
+              <a href="http://puppetlabs.com/community/">
+                <span>Community</span>
+              </a>
+            </li>
+
+            <li id="company-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/company/">
+                <span>Company</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li><a href="http://puppetlabs.com/company/">About Us</a></li>
+                <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+              </ul>
+            </li>
+      		</ul>	   
+          <ul id="misc-navigation">
+            <li><a href="http://docs.puppetlabs.com">Documentation</a></li>
+            <li><a href="http://puppetlabs.com/resources/customer-support/">Support</a></li>
+            <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+            <li><a href="http://puppetlabs.com/resources/downloads" class="gateway">Download</a></li>
+          </ul>
+        </nav>
+    	</div>
+    </header>  
+
+      <section id="masthead">
+        <div class="site-width">
+          <h1>Docs: <span class="section-name">service</span></h1>
+          <ul id="doc-navigation">
+            <li><a href="/">Docs Home</a></li>
+            <li class="with-submenu">
+              <a href="#">
+                <span>Quick Nav</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+               <!-- the following links can't be relative, unfortunately -->
+               <!-- future: add some JS to disable this if running from file:// -->
+	            <dl>
+	              <dt>Guides</dt>
+	              <dd><a href="/index.html">Index</a></dd>
+                      <dt>Resource Types</dt>
+	              <dd><a href="/guides/types/">By Category</a></dd>
+	              <dd><a href="/guides/types/alphabetical_index.html">Alphabetical</a></dd>
+	              <dt>References</dt>
+                      <dd><a href="/references/2.6.0/">2.6.0</a></dd> 
+                      <dd><a href="/references/0.25.5/">0.25.5</a></dd> 
+	              <dd><a href="/references/0.25.4/">0.25.4</a></dd>
+	              <dd><a href="/references/0.25.3/">0.25.3</a></dd>
+	              <dd><a href="/references/0.25.2/">0.25.2</a></dd>
+	              <dd><a href="/references/0.25.1/">0.25.1</a></dd>
+	              <dd><a href="/references/0.25.0/">0.25.0</a></dd>
+	              <dd><a href="/references/0.24.8/">0.24.8</a></dd>
+	              <dd><a href="/references/">Older Versions</a></dd>
+	            </dl>
+            </li>
+            <li><a href="/contribute.html">Contribute</a></li>
+          </ul>
+        </div>
+      </section>
+    
+      <section id="content">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <h1 id='service'>service</h1>
+              <h2 id='about'>About</h2>
+
+<p>Manage running services. Service support unfortunately varies widely by platform &#8211; some platforms have very little if any concept of a running service, and some have a very codified and powerful concept. Puppet&#8217;s service support will generally be able to make up for any inherent shortcomings (e.g., if there is no &#8216;status&#8217; command, then Puppet will look in the process table for a command matching the service name), but the more information you can provide the better behaviour you will get. Or, you can just use a platform that has very good service support.</p>
+
+<p>Note that if a <code>service</code> receives an event from another resource, the service will get restarted. The actual command to restart the service depends on the platform. You can provide a special command for restarting with the <code>restart</code> attribute.</p>
+
+<h2 id='features'>Features</h2>
+
+<ul>
+<li><strong>controllable</strong>: The provider uses a control variable.</li>
+
+<li><strong>enableable</strong>: The provider can enable and disable the service</li>
+
+<li><strong>refreshable</strong>: The provider can restart the service.</li>
+</ul>
+<table class='docutils' border='1'>
+<colgroup>
+<col width='25%' />
+<col width='27%' />
+<col width='23%' />
+<col width='25%' />
+
+</colgroup>
+<thead valign='bottom'>
+<tr><th class='head'>Provider</th>
+<th class='head'>controllable</th>
+<th class='head'>enableable</th>
+<th class='head'>refreshable</th>
+</tr>
+</thead>
+<tbody valign='top'>
+<tr><td>base</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+
+<td><strong>X</strong></td>
+</tr>
+<tr><td>daemontools</td>
+<td>&nbsp;</td>
+<td><strong>X</strong></td>
+<td><strong>X</strong></td>
+</tr>
+<tr><td>debian</td>
+<td>&nbsp;</td>
+<td><strong>X</strong></td>
+<td><strong>X</strong></td>
+
+</tr>
+<tr><td>freebsd</td>
+<td>&nbsp;</td>
+<td><strong>X</strong></td>
+<td><strong>X</strong></td>
+</tr>
+<tr><td>gentoo</td>
+<td>&nbsp;</td>
+<td><strong>X</strong></td>
+<td><strong>X</strong></td>
+</tr>
+
+<tr><td>init</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>X</strong></td>
+</tr>
+<tr><td>launchd</td>
+<td>&nbsp;</td>
+<td><strong>X</strong></td>
+<td><strong>X</strong></td>
+</tr>
+<tr><td>redhat</td>
+
+<td>&nbsp;</td>
+<td><strong>X</strong></td>
+<td><strong>X</strong></td>
+</tr>
+<tr><td>runit</td>
+<td>&nbsp;</td>
+<td><strong>X</strong></td>
+<td><strong>X</strong></td>
+</tr>
+<tr><td>smf</td>
+<td>&nbsp;</td>
+
+<td><strong>X</strong></td>
+<td><strong>X</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id='parameters'>Parameters</h2>
+
+<h2 id='binary'>binary</h2>
+
+<p>The path to the daemon. This is only used for systems that do not support init scripts. This binary will be used to start the service if no <code>start</code> parameter is provided.</p>
+
+<h2 id='control'>control</h2>
+
+<p>The control variable used to manage services (originally for HP-UX). Defaults to the upcased service name plus <code>START</code> replacing dots with underscores, for those providers that support the <code>controllable</code> feature.</p>
+
+<h2 id='enable'>enable</h2>
+
+<p>Whether a service should be enabled to start at boot. This property behaves quite differently depending on the platform; wherever possible, it relies on local tools to enable or disable a given service. Valid values are <code>true</code>, <code>false</code>. Requires features enableable.</p>
+
+<h2 id='ensure'>ensure</h2>
+
+<p>Whether a service should be running. Valid values are <code>stopped</code> (also called <code>false</code>), <code>running</code> (also called <code>true</code>).</p>
+
+<h2 id='hasrestart'>hasrestart</h2>
+
+<p>Specify that an init script has a <code>restart</code> option. Otherwise, the init script&#8217;s <code>stop</code> and <code>start</code> methods are used. Valid values are <code>true</code>, <code>false</code>.</p>
+
+<h2 id='hasstatus'>hasstatus</h2>
+
+<p>Declare the the service&#8217;s init script has a functional status command. Based on testing, it was found that a large number of init scripts on different platforms do not support any kind of status command; thus, you must specify manually whether the service you are running has such a command (or you can specify a specific command using the <code>status</code> parameter).</p>
+
+<p>If you do not specify anything, then the service name will be looked for in the process table. Valid values are <code>true</code>, <code>false</code>.</p>
+
+<h2 id='manifest'>manifest</h2>
+
+<p>Specify a command to config a service, or a path to a manifest to do so.</p>
+
+<h2 id='name'>name</h2>
+
+<ul>
+<li><strong>namevar</strong></li>
+</ul>
+
+<p>The name of the service to run. This name is used to find the service in whatever service subsystem it is in.</p>
+
+<h2 id='path'>path</h2>
+
+<p>The search path for finding init scripts. Multiple values should be separated by colons or provided as an array.</p>
+
+<h2 id='pattern'>pattern</h2>
+
+<p>The pattern to search for in the process table. This is used for stopping services on platforms that do not support init scripts, and is also used for determining service status on those service whose init scripts do not include a status command.</p>
+
+<p>If this is left unspecified and is needed to check the status of a service, then the service name will be used instead.</p>
+
+<p>The pattern can be a simple string or any legal Ruby pattern.</p>
+
+<h2 id='provider'>provider</h2>
+
+<p>The specific backend for provider to use. You will seldom need to specify this &#8211; Puppet will usually discover the appropriate provider for your platform. Available providers are:</p>
+
+<ul>
+<li>
+<p><strong>base</strong>: The simplest form of service support.</p>
+
+<blockquote>
+<p>You have to specify enough about your service for this to work; the minimum you can specify is a binary for starting the process, and this same binary will be searched for in the process table to stop the service. It is preferable to specify start, stop, and status commands, akin to how you would do so using <code>init</code>.</p>
+
+<blockquote>
+<p>Required binaries: <code>kill</code>. Supported features: <code>refreshable</code>.</p>
+</blockquote>
+</blockquote>
+</li>
+
+<li>
+<p><strong>daemontools</strong>: Daemontools service management.</p>
+
+<blockquote>
+<p>This provider manages daemons running supervised by D.J.Bernstein daemontools. It tries to detect the service directory, with by order of preference:</p>
+
+<ul>
+<li>/service</li>
+
+<li>/etc/service</li>
+
+<li>/var/lib/svscan</li>
+</ul>
+
+<p>The daemon directory should be placed in a directory that can be by default in:</p>
+
+<ul>
+<li>/var/lib/service</li>
+
+<li>/etc</li>
+</ul>
+
+<p>or this can be overriden in the service resource parameters:</p>
+
+<pre><code>service {
+ &quot;myservice&quot;:
+   provider =&gt; &quot;daemontools&quot;, path =&gt; &quot;/path/to/daemons&quot;;
+}</code></pre>
+
+<p>This provider supports out of the box:</p>
+
+<ul>
+<li>start/stop (mapped to enable/disable)</li>
+
+<li>enable/disable</li>
+
+<li>restart</li>
+
+<li>status</li>
+</ul>
+
+<p>If a service has ensure =&gt; &#8220;running&#8221;, it will link /path/to/daemon to /path/to/service, which will automatically enable the service.</p>
+
+<p>If a service has ensure =&gt; &#8220;stopped&#8221;, it will only down the service, not remove the /path/to/service link.</p>
+
+<blockquote>
+<p>Required binaries: <code>/usr/bin/svstat</code>, <code>/usr/bin/svc</code>. Supported features: <code>enableable</code>, <code>refreshable</code>.</p>
+</blockquote>
+</blockquote>
+</li>
+
+<li>
+<p><strong>debian</strong>: Debian&#8217;s form of <code>init</code>-style management.</p>
+
+<blockquote>
+<p>The only difference is that this supports service enabling and disabling via <code>update-rc.d</code> and determines enabled status via <code>invoke-rc.d</code>.</p>
+
+<blockquote>
+<p>Required binaries: <code>/usr/sbin/update-rc.d</code>, <code>/usr/sbin/invoke-rc.d</code>. Default for <code>operatingsystem</code> == <code>debianubuntu</code>. Supported features: <code>enableable</code>, <code>refreshable</code>.</p>
+</blockquote>
+</blockquote>
+</li>
+
+<li>
+<p><strong>freebsd</strong>: FreeBSD&#8217;s (and probably NetBSD?) form of <code>init</code>-style service management.</p>
+
+<blockquote>
+<p>Uses <code>rc.conf.d</code> for service enabling and disabling.</p>
+
+<p>Default for <code>operatingsystem</code> == <code>freebsd</code>. Supported features: <code>enableable</code>, <code>refreshable</code>.</p>
+</blockquote>
+</li>
+
+<li>
+<p><strong>gentoo</strong>: Gentoo&#8217;s form of <code>init</code>-style service management.</p>
+
+<blockquote>
+<p>Uses <code>rc-update</code> for service enabling and disabling.</p>
+
+<blockquote>
+<h1 id='required_binaries__default_for_'>Required binaries: <code>/sbin/rc-update</code>. Default for <code>operatingsystem</code></h1>
+</blockquote>
+</blockquote>
+</li>
+
+<li>
+<p><strong>init</strong>: Standard init service management.</p>
+
+<blockquote>
+<p>This provider assumes that the init script has no <code>status</code> command, because so few scripts do, so you need to either provide a status command or specify via <code>hasstatus</code> that one already exists in the init script.</p>
+
+<blockquote>
+<p>Supported features: <code>refreshable</code>.</p>
+</blockquote>
+</blockquote>
+</li>
+
+<li>
+<p><strong>launchd</strong>: launchd service management framework.</p>
+
+<blockquote>
+<p>This provider manages launchd jobs, the default service framework for Mac OS X, that has also been open sourced by Apple for possible use on other platforms.</p>
+
+<dl>
+<dt>See:</dt>
+
+<dd>
+<li><a href='http://developer.apple.com/macosx/launchd.html'>http://developer.apple.com/macosx/launchd.html</a></li>
+
+<li><a href='http://launchd.macosforge.org/'>http://launchd.macosforge.org/</a></li>
+</dd>
+
+<dt>This provider reads plists out of the following directories:</dt>
+
+<dd>
+<li>/System/Library/LaunchDaemons</li>
+
+<li>/System/Library/LaunchAgents</li>
+
+<li>/Library/LaunchDaemons</li>
+
+<li>/Library/LaunchAgents</li>
+</dd>
+</dl>
+
+<p>and builds up a list of services based upon each plists &#8220;Label&#8221; entry.</p>
+
+<dl>
+<dt>This provider supports:</dt>
+
+<dd>
+<li>ensure =&gt; running/stopped,</li>
+
+<li>enable =&gt; true/false</li>
+
+<li>status</li>
+
+<li>restart</li>
+</dd>
+
+<dt>Here is how the Puppet states correspond to launchd states:</dt>
+
+<dd>
+<li>stopped =&gt; job unloaded</li>
+
+<li>started =&gt; job loaded</li>
+
+<li>enabled =&gt; &#8216;Disable&#8217; removed from job plist file</li>
+
+<li>disabled =&gt; &#8216;Disable&#8217; added to job plist file</li>
+</dd>
+</dl>
+
+<p>Note that this allows you to do something launchctl can&#8217;t do, which is to be in a state of &#8220;stopped/enabled or &#8220;running/disabled&#8221;.</p>
+
+<blockquote>
+<p>Required binaries: <code>/usr/bin/sw_vers</code>, <code>/bin/launchctl</code>. Default for <code>operatingsystem</code> == <code>darwin</code>. Supported features: <code>enableable</code>, <code>refreshable</code>.</p>
+</blockquote>
+</blockquote>
+</li>
+
+<li>
+<p><strong>redhat</strong>: Red Hat&#8217;s (and probably many others) form of <code>init</code>-style service management:</p>
+
+<blockquote>
+<p>Uses <code>chkconfig</code> for service enabling and disabling.</p>
+
+<blockquote>
+<p>Required binaries: <code>/sbin/chkconfig</code>, <code>/sbin/service</code>. Default for <code>operatingsystem</code> == <code>redhatfedorasusecentosslesoelovm</code>. Supported features: <code>enableable</code>, <code>refreshable</code>.</p>
+</blockquote>
+</blockquote>
+</li>
+
+<li>
+<p><strong>runit</strong>: Runit service management.</p>
+
+<p>This provider manages daemons running supervised by Runit. It tries to detect the service directory, with by order of preference:</p>
+
+<blockquote>
+<ul>
+<li>/service</li>
+
+<li>/var/service</li>
+
+<li>/etc/service</li>
+</ul>
+</blockquote>
+
+<p>The daemon directory should be placed in a directory that can be by default in:</p>
+
+<blockquote>
+<ul>
+<li>/etc/sv</li>
+</ul>
+</blockquote>
+
+<p>or this can be overriden in the service resource parameters:</p>
+
+<pre><code>service {
+ &quot;myservice&quot;:
+   provider =&gt; &quot;runit&quot;, path =&gt; &quot;/path/to/daemons&quot;;
+}</code></pre>
+
+<p>This provider supports out of the box:</p>
+
+<blockquote>
+<ul>
+<li>start/stop</li>
+
+<li>enable/disable</li>
+
+<li>restart</li>
+
+<li>status</li>
+</ul>
+</blockquote>
+
+<p>Required binaries: <code>/usr/bin/sv</code>. Supported features: <code>enableable</code>, <code>refreshable</code>.</p>
+</li>
+
+<li>
+<p><strong>smf</strong>: Support for Sun&#8217;s new Service Management Framework.</p>
+
+<blockquote>
+<p>Starting a service is effectively equivalent to enabling it, so there is only support for starting and stopping services, which also enables and disables them, respectively.</p>
+
+<p>By specifying manifest =&gt; &#8220;/path/to/service.xml&#8221;, the SMF manifest will be imported if it does not exist.</p>
+
+<blockquote>
+<p>Required binaries: <code>/usr/sbin/svcadm</code>, <code>/usr/bin/svcs</code>, <code>/usr/sbin/svccfg</code>. Default for <code>operatingsystem</code> == <code>solaris</code>. Supported features: <code>enableable</code>, <code>refreshable</code>.</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+
+<h2 id='restart'>restart</h2>
+
+<p>Specify a <em>restart</em> command manually. If left unspecified, the service will be stopped and then started.</p>
+
+<h2 id='start'>start</h2>
+
+<p>Specify a <em>start</em> command manually. Most service subsystems support a <code>start</code> command, so this will not need to be specified.</p>
+
+<h2 id='status'>status</h2>
+
+<p>Specify a <em>status</em> command manually. If left unspecified, the status method will be determined automatically, usually by looking for the service in the process table.</p>
+
+<h2 id='stop'>stop</h2>
+
+<p>Specify a <em>stop</em> command manually.</p>
+<hr />
+            </div>
+            <div class="secondary-content">
+                    <div id="subCol">
+        <h3 class="chapter">Contents</h3>
+        <ol class="chapters">
+<li><a href="#about">About</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#binary">binary</a></li>
+<li><a href="#control">control</a></li>
+<li><a href="#enable">enable</a></li>
+<li><a href="#ensure">ensure</a></li>
+<li><a href="#hasrestart">hasrestart</a></li>
+<li><a href="#hasstatus">hasstatus</a></li>
+<li><a href="#manifest">manifest</a></li>
+<li><a href="#name">name</a></li>
+<li><a href="#path">path</a></li>
+<li><a href="#pattern">pattern</a></li>
+<li><a href="#provider">provider</a></li>
+<li><a href="#restart">restart</a></li>
+<li><a href="#start">start</a></li>
+<li><a href="#status">status</a></li>
+<li><a href="#stop">stop</a></li></ol></div>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+  		<footer id="footer">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <section id="newsletter">
+                <h4>Newsletter</h4>
+                <p>Stay up to date on all things puppet</p>
+                <form action="http://lfov.net/webrecorder/f" method="post" name="Newsletter">
+                  <input type="hidden" name="formid" value="3d424fd0-4204-435f-afde-aa1c4a6bc2f1"/>
+                  <input type="hidden" name="cid" value="LF_c268993e"/>
+                  <fieldset>
+                    <legend>Newsletter</legend>
+                    <label form="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                    <button type="submit">Subscribe</button>
+                  </fieldset>
+                </form>
+              </section>
+              <section id="elsewhere">
+                <h4>Elsewhere</h4>
+                <ul>
+                  <li class="chat"><a href="http://webchat.freenode.net/?channels=puppet" rel="external"><span class="indicator"></span><span>Chat with us on IRC</span></a></li>
+                  <li class="discussion"><a href="http://groups.google.com/group/puppet-users?pli=1" rel="external"><span class="indicator"></span><span>Join the Mailing List</span></a></li>
+                  <li class="facebook"><a href="http://www.facebook.com/pages/Portland-OR/Reductive-Labs/190644013795?ref=ts&v=wall" rel="external"><span class="indicator"></span><span>Become a Fan on Facebook</span></a></li>
+                  <li class="subscribe"><a href="http://feeds.feedburner.com/PuppetLabs" rel="external"><span class="indicator"></span><span>Subscribe to our blog</span></a></li>
+
+                  <li class="twitter"><a href="http://twitter.com/puppetlabs" rel="external"><span class="indicator"></span><span>Follow us on Twitter</span></a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="secondary-content">
+              <section id="book-it">
+                <h4>Get the book!</h4>
+                <p>Written by James Turnbull, <a href="http://apress.com/book/view/1590599780" rel="nofollow">Pulling Strings with Puppet</a> is the first book to introduce the powerful Puppet system administration tool. </p>
+                <img src="http://puppetlabs.com/images/book.png" />
+              </section>
+            </div>
+          </div>
+        </div>
+  		</footer>
+      <div id="copyright">
+        <div class="site-width">
+          &copy; 2010 <a href="http://puppetlabs.com/" title="Puppet Labs">Puppet Labs</a>
+          <span class="vcard">
+           <span class="org">Puppet Labs</span>
+           <a class="email" href="mailto:info@puppetlabs.com">info@puppetlabs.com</a>
+            <span class="adr">
+             <span class="street-address">222 NW Davis Street</span>
+             /
+             <span class="locality">Portland</span>, 
+             <span class="region">OR</span>
+             <span class="postal-code">97209</span>
+
+            </span>
+           <span class="tel">+1 503-805-9065</span>
+          </span>          
+        </div>
+      </div>
+    </div>
+    <!-- BEGIN: LOOPFUSE TRACKING -->
+    <script src="http://lfov.net/webrecorder/js/listen.js" type="text/Javascript"></script>
+    <script type="text/Javascript">
+    _lf_cid = "LF_c268993e";
+    _lf_remora();
+    </script>
+    <!-- END: LOOPFUSE TRACKING -->
+    
+  	<script type="text/javascript">Cufon.now();</script>
+  	<style type="text/css">h1, h2{ visibility : visible }</style>
+  	
+  </body>
+</html>

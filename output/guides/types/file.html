@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<title>Documentation | Puppet Labs - file</title>
+  	<meta name="description" content="The open source leader in data center automation">
+  	<link rel="alternate" type="text/xml" title="Puppet Labs RSS 0.92 Feed" href="http://puppetlabs.com/feed/rss/">
+  	<link rel="alternate" type="application/atom+xml" title="Puppet Labs Atom Feed" href="http://puppetlabs.com/feed/atom/">
+  	<link rel="alternate" type="application/rss+xml" title="Puppet Labs RSS 2.0 Feed" href="http://puppetlabs.com/feed/">
+  	<link rel="pingback" href="http://puppetlabs.com/xmlrpc.php">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://puppetlabs.com/xmlrpc.php?rsd" />
+    <link rel='index' title='Puppet Labs' href='http://docs.puppetlabs.com' />
+
+<!-- Google stats -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1537572-5");
+pageTracker._setDomainName(".puppetlabs.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- End Google stats -->
+
+
+    <!-- FIXME: absolute paths -->
+
+    <script type='text/javascript' src='/files/javascripts/html5.js'></script>
+    <script type='text/javascript' src='/files/javascripts/jquery-1.3.2.min.js'></script>
+    <script type='text/javascript' src='/files/javascripts/drop_down.js'></script>
+    <script type='text/javascript' src='/files/javascripts/code_highlighter.js'></script>
+
+    <script type='text/javascript' src='/files/javascripts/cufon-yui.js'></script>
+    <script type='text/javascript' src='/files/fonts/Klavika_400-Klavika_600.font.js'></script>
+    <script type='text/javascript' src='/files/javascripts/ampersands.js'></script>
+
+
+    <!-- All in One SEO Pack 1.6.10.1 by Michael Torbert of Semper Fi Web Design[127,146] -->
+    <meta name="keywords" content="Puppet, puppet labs, reductive labs, open source, system administrator, ruby, data center, automation, support" />
+    <link rel="canonical" href="http://docs.puppetlabs.com" />
+    <!-- /all in one seo pack -->
+	
+    <!-- FIXME: absolute paths -->
+
+    <link rel="stylesheet" type="text/css" href="/files/stylesheets/style.css" media="screen"> <!-- index -->
+
+    <!--[if IE 7]>
+	  <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_7.css" media="screen"> <!-- index -->
+    <![endif]-->
+  
+    <!--[if IE 8]>
+	    <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_8.css" media="screen"> <!-- index -->
+    <![endif]-->		
+
+  	<script type="text/javascript">
+      Cufon.replace('h1, h2', { fontWeight: '600' });
+  	</script>
+</head>
+
+
+
+        
+  <body id="resources" class="docs">
+  <style type="text/css">h1, h2{ visibility : hidden }</style>		
+  <!--[if IE 8]>
+    <style type="text/css">h1, h2{ visibility : visible }</style>
+  <![endif]-->		
+
+  	<header id="header">
+      <div class="site-width">
+    		<h1><a href="http://puppetlabs.com/"><span>Puppet Labs</span></a></h1>
+        <a class="screen-reader-content" href="#content">Skip navigation</a>
+        <nav>
+      		<ul id="global-navigation">
+            <li id="puppet-tab" class="with-submenu">
+
+              <a href="http://puppetlabs.com/puppet/">
+                <span>Puppet</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>            
+                <li>
+                  <ul>
+                    <li class="page_item page-item-757"><a href="http://puppetlabs.com/puppet/introduction/" title="Introduction">Introduction</a></li>
+                    <li class="page_item page-item-769"><a href="http://puppetlabs.com/puppet/requirements/" title="Requirements">Requirements</a></li>
+                    <li class="page_item page-item-828"><a href="http://puppetlabs.com/puppet/features/" title="Features">Features</a></li>
+                    <li class="page_item page-item-956"><a href="http://puppetlabs.com/puppet/solutions/" title="Solutions">Solutions</a></li>
+                    <li class="page_item page-item-1159"><a href="http://puppetlabs.com/puppet/users/" title="Users">Users</a></li>
+                    <li class="page_item page-item-1074"><a href="http://puppetlabs.com/resources/white-papers" title="White Papers">White Papers</a></li>
+                    <li class="page_item page-item-1495"><a href="http://puppetlabs.com/resources/case-studies" title="Case Studies">Case Studies</a></li>
+                    <li class="page_item page-item-1044"><a href="http://puppetlabs.com/resources/downloads" title="Downloads">Downloads</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li class="page_item page-item-751"><a href="http://puppetlabs.com/puppet/related-projects/dashboard/" title="Dashboard">Dashboard</a></li>
+                    <li class="page_item page-item-753"><a href="http://puppetlabs.com/puppet/related-projects/facter/" title="Facter">Facter</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="services-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/services/">
+                <span>Services</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-783"><a href="http://puppetlabs.com/services/overview/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-839"><a href="http://puppetlabs.com/services/support/" title="Enterprise Support">Enterprise Support</a></li>
+                <li class="page_item page-item-845"><a href="http://puppetlabs.com/services/training-workshops/" title="On-Site Training &amp; Consulting">On-Site Training &amp; Consulting</a></li>
+                <li class="page_item page-item-849"><a href="http://puppetlabs.com/category/events/upcoming/" title="Events &amp; Public Training">Events &amp; Public Training</a></li>
+                <li class="page_item page-item-851"><a href="http://puppetlabs.com/services/partners/" title="Partners">Partners</a></li>
+                <li class="page_item page-item-1037"><a href="http://puppetlabs.com/resources/customer-support" title="Customer Support">Customer Support</a></li>
+              </ul>
+            </li>
+            <li id="resources-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/resources/">
+                <span>Resources</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-1048"><a href="http://puppetlabs.com/resources/overview-2/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-1040"><a href="http://docs.puppetlabs.com" title="Documentation">Documentation</a></li>
+                <li class="page_item page-item-872"><a href="http://puppetlabs.com/resources/downloads/" title="Downloads">Downloads</a></li>
+                <li class="page_item page-item-835"><a href="http://puppetlabs.com/resources/white-papers/" title="White Papers">White Papers</a></li>
+                <li class="page_item page-item-833"><a href="http://puppetlabs.com/resources/case-studies/" title="Case Studies">Case Studies</a></li>
+                <li class="page_item page-item-1052"><a href="http://puppetlabs.com/resources/customer-support/" title="Customer Support">Customer Support</a></li>
+              </ul>
+
+            </li>
+            <li id="community-tab">
+              <a href="http://puppetlabs.com/community/">
+                <span>Community</span>
+              </a>
+            </li>
+
+            <li id="company-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/company/">
+                <span>Company</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li><a href="http://puppetlabs.com/company/">About Us</a></li>
+                <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+              </ul>
+            </li>
+      		</ul>	   
+          <ul id="misc-navigation">
+            <li><a href="http://docs.puppetlabs.com">Documentation</a></li>
+            <li><a href="http://puppetlabs.com/resources/customer-support/">Support</a></li>
+            <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+            <li><a href="http://puppetlabs.com/resources/downloads" class="gateway">Download</a></li>
+          </ul>
+        </nav>
+    	</div>
+    </header>  
+
+      <section id="masthead">
+        <div class="site-width">
+          <h1>Docs: <span class="section-name">file</span></h1>
+          <ul id="doc-navigation">
+            <li><a href="/">Docs Home</a></li>
+            <li class="with-submenu">
+              <a href="#">
+                <span>Quick Nav</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+               <!-- the following links can't be relative, unfortunately -->
+               <!-- future: add some JS to disable this if running from file:// -->
+	            <dl>
+	              <dt>Guides</dt>
+	              <dd><a href="/index.html">Index</a></dd>
+                      <dt>Resource Types</dt>
+	              <dd><a href="/guides/types/">By Category</a></dd>
+	              <dd><a href="/guides/types/alphabetical_index.html">Alphabetical</a></dd>
+	              <dt>References</dt>
+                      <dd><a href="/references/2.6.0/">2.6.0</a></dd> 
+                      <dd><a href="/references/0.25.5/">0.25.5</a></dd> 
+	              <dd><a href="/references/0.25.4/">0.25.4</a></dd>
+	              <dd><a href="/references/0.25.3/">0.25.3</a></dd>
+	              <dd><a href="/references/0.25.2/">0.25.2</a></dd>
+	              <dd><a href="/references/0.25.1/">0.25.1</a></dd>
+	              <dd><a href="/references/0.25.0/">0.25.0</a></dd>
+	              <dd><a href="/references/0.24.8/">0.24.8</a></dd>
+	              <dd><a href="/references/">Older Versions</a></dd>
+	            </dl>
+            </li>
+            <li><a href="/contribute.html">Contribute</a></li>
+          </ul>
+        </div>
+      </section>
+    
+      <section id="content">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <h1 id='file'>file</h1>
+
+<p>Manages local files.</p>
+
+<ul>
+<li>Sets ownership and permissions.</li>
+
+<li>Supports creation of both files and directories.</li>
+
+<li>Retrieves entire files from remote servers.</li>
+</ul>
+              <h2 id='background'>Background</h2>
+
+<p>As Puppet matures, it expected that the <code>file</code> resource will be used less and less to manage content, and instead native resources will be used to do so.</p>
+<div class='note'><p>If you find that you are often copying files in from a central location, rather than using native resources, please contact Puppet Labs and we can hopefully work with you to develop a native resource to support what you are doing.</p></div>
+<h2 id='requirements'>Requirements</h2>
+
+<p>No additional requirmements.</p>
+
+<h2 id='platforms'>Platforms</h2>
+
+<p>All platforms.</p>
+
+<h2 id='version_compatibility'>Version Compatibility</h2>
+<div class='warning'><p>This section has not been completed.</p></div>
+<h2 id='examples'>Examples</h2>
+
+<p>Here is a simple example:</p>
+
+<pre><code>file { &quot;/var/www/my/file&quot;:
+    source =&gt; &quot;/path/in/nfs/or/something&quot;,
+    mode   =&gt; 666
+}</code></pre>
+
+<p>There are also a number of additional, more complete examples below.</p>
+
+<h2 id='parameters'>Parameters</h2>
+
+<h3 id='id649'><code>backup</code></h3>
+
+<p>Whether files should be backed up before being replaced. The preferred method of backing files up is via a <code>filebucket</code>, which stores files by their MD5 sums and allows easy retrieval without littering directories with backups. You can specify a local filebucket or a network-accessible server-based filebucket by setting <code>backup =&gt; bucket-name</code>. Alternatively, if you specify any value that begins with a <code>.</code> (e.g., <code>.puppet-bak</code>), then Puppet will use copy the file in the same directory with that value as the extension of the backup. Setting <code>backup =&gt; false</code> disables all backups of the file in question.</p>
+
+<p>Puppet automatically creates a local filebucket named <code>puppet</code> and defaults to backing up there. To use a server-based filebucket, you must specify one in your configuration:</p>
+
+<pre><code>filebucket { main:
+    server =&gt; puppet
+}</code></pre>
+
+<p>The <code>puppetmasterd</code> daemon creates a filebucket by default, so you can usually back up to your main server with this configuration. Once you&#8217;ve described the bucket in your configuration, you can use it in any <code>file::</code></p>
+
+<pre><code>file { &quot;/my/file&quot;:
+    source =&gt; &quot;/path/in/nfs/or/something&quot;,
+    backup =&gt; main
+}</code></pre>
+
+<p>This will back the file up to the central server.</p>
+
+<p>At this point, the benefits of using a filebucket are that you do not have backup files lying around on each of your machines, a given version of a file is only backed up once, and you can restore any given file manually, no matter how old. Eventually, transactional support will be able to automatically restore filebucketed files.</p>
+
+<h3 id='id650'><code>checksum</code></h3>
+
+<p>How to check whether a file has changed. This state is used internally for file copying, but it can also be used to monitor files somewhat like Tripwire without managing the file contents in any way. You can specify that a file&#8217;s checksum should be monitored and then subscribe to the file from another object and receive events to signify checksum changes, for instance.</p>
+
+<p>There are a number of checksum types available including MD5 hashing (and an md5lite variation that only hashes the first 500 characters of the file.</p>
+
+<p>The default checksum parameter, if checksums are enabled, is md5. Valid values are <code>md5</code>, <code>md5lite</code>, <code>timestamp</code>, <code>mtime</code>, <code>time</code>. Values can match <code>/^\{md5|md5lite|timestamp|mtime|time\}/</code>.</p>
+
+<h3 id='id651'><code>content</code></h3>
+
+<p>Specify the contents of a file as a string. Newlines, tabs, and spaces can be specified using the escaped syntax (e.g., n for a newline). The primary purpose of this parameter is to provide a kind of limited templating:</p>
+
+<pre><code>define resolve(nameserver1, nameserver2, domain, search) {
+    $str = &quot;search $search
+            domain $domain
+            nameserver $nameserver1
+            nameserver $nameserver2&quot;
+    file { &quot;/etc/resolv.conf&quot;:
+        content =&gt; $str
+    }
+}</code></pre>
+
+<p>This attribute is especially useful when used with templating.</p>
+
+<h3 id='id652'><code>ensure</code></h3>
+
+<p>Whether to create files that don&#8217;t currently exist. Possible values are <em>absent</em>, <em>present</em>, <em>file</em>, and <em>directory</em>. Specifying <code>present</code> will match any form of file existence, and if the file is missing will create an empty file. Specifying <code>absent</code> will delete the file (and directory if recurse =&gt; true).</p>
+
+<p>Anything other than those values will be considered to be a symlink. For instance, the following text creates a link:</p>
+
+<pre><code># Useful on solaris
+file { &quot;/etc/inetd.conf&quot;:
+    ensure =&gt; &quot;/etc/inet/inetd.conf&quot;
+}</code></pre>
+
+<p>You can make relative links:</p>
+
+<pre><code># Useful on solaris
+file { &quot;/etc/inetd.conf&quot;:
+    ensure =&gt; &quot;inet/inetd.conf&quot;
+}</code></pre>
+
+<p>If you need to make a relative link to a file named the same as one of the valid values, you must prefix it with <code>./</code> or something similar.</p>
+
+<p>You can also make recursive symlinks, which will create a directory structure that maps to the target directory, with directories corresponding to each directory and links corresponding to each file. Valid values are <code>absent</code> (also called <code>false</code>), <code>file</code>, <code>present</code>, <code>directory</code>, <code>link</code>. Values can match <code>/./</code>.</p>
+
+<h3 id='id653'><code>force</code></h3>
+
+<p>Force the file operation. Currently only used when replacing directories with links. Valid values are <code>true</code>, <code>false</code>.</p>
+
+<h3 id='id654'><code>group</code></h3>
+
+<p>Which group should own the file. Argument can be either group name or group ID.</p>
+
+<h3 id='id655'><code>ignore</code></h3>
+
+<p>A parameter which omits action on files matching specified patterns during recursion. Uses Ruby&#8217;s builtin globbing engine, so shell metacharacters are fully supported, e.g. <code>[a-z]*</code>. Matches that would descend into the directory structure are ignored, e.g., <code>*/*</code>.</p>
+
+<h3 id='id656'><code>links</code></h3>
+
+<p>How to handle links during file actions. During file copying, <code>follow</code> will copy the target file instead of the link, <code>manage</code> will copy the link itself, and <code>ignore</code> will just pass it by. When not copying, <code>manage</code> and <code>ignore</code> behave equivalently (because you cannot really ignore links entirely during local recursion), and <code>follow</code> will manage the file to which the link points. Valid values are <code>follow</code>, <code>manage</code>.</p>
+
+<h3 id='id657'><code>mode</code></h3>
+
+<p>Mode the file should be. Currently relatively limited: you must specify the exact mode the file should be.</p>
+
+<h3 id='id658'><code>owner</code></h3>
+
+<p>To whom the file should belong. Argument can be user name or user ID.</p>
+
+<h3 id='id659'><code>path</code></h3>
+
+<p>The path to the file to manage. Must be fully qualified.</p>
+<div class='info'><p>This is the <code>namevar</code> for this resource type.</p></div>
+<h3 id='id660'><code>purge</code></h3>
+
+<p>Whether unmanaged files should be purged. If you have a filebucket configured the purged files will be uploaded, but if you do not, this will destroy data. Only use this option for generated files unless you really know what you are doing. This option only makes sense when recursively managing directories.</p>
+
+<p>Note that when using <code>purge</code> with <code>source</code>, Puppet will purge any files that are not on the remote system. Valid values are <code>true</code>, <code>false</code>.</p>
+
+<h3 id='id661'><code>recurse</code></h3>
+
+<p>Whether and how deeply to do recursive management. Valid values are <code>true</code>, <code>false</code>, <code>inf</code>, <code>remote</code>. Values can match <code>/^[0-9]+$/</code>.</p>
+
+<h3 id='id662'><code>recurselimit</code></h3>
+
+<p>How deeply to do recursive management. Values can match <code>/^[0-9]+$/</code>.</p>
+
+<h3 id='id663'><code>replace</code></h3>
+
+<p>Whether or not to replace a file that is sourced but exists. This is useful for using file sources purely for initialization. Valid values are <code>true</code> (also called <code>yes</code>), <code>false</code> (also called <code>no</code>).</p>
+
+<h3 id='id664'><code>selrange</code></h3>
+
+<p>What the SELinux range component of the context of the file should be. Any valid SELinux range component is accepted. For example <code>s0</code> or <code>SystemHigh</code>. If not specified it defaults to the value returned by matchpathcon for the file, if any exists. Only valid on systems with SELinux support enabled and that have support for MCS (Multi-Category Security).</p>
+
+<h3 id='id665'><code>selrole</code></h3>
+
+<p>What the SELinux role component of the context of the file should be. Any valid SELinux role component is accepted. For example <code>role_r</code>. If not specified it defaults to the value returned by matchpathcon for the file, if any exists. Only valid on systems with SELinux support enabled.</p>
+
+<h3 id='id666'><code>seltype</code></h3>
+
+<p>What the SELinux type component of the context of the file should be. Any valid SELinux type component is accepted. For example <code>tmp_t</code>. If not specified it defaults to the value returned by matchpathcon for the file, if any exists. Only valid on systems with SELinux support enabled.</p>
+
+<h3 id='id667'><code>seluser</code></h3>
+
+<p>What the SELinux user component of the context of the file should be. Any valid SELinux user component is accepted. For example <code>user_u</code>. If not specified it defaults to the value returned by matchpathcon for the file, if any exists. Only valid on systems with SELinux support enabled.</p>
+
+<h3 id='id668'><code>source</code></h3>
+
+<p>Copy a file over the current file. Uses <code>checksum</code> to determine when a file should be copied. Valid values are either fully qualified paths to files, or URIs. Currently supported URI types are <em>puppet</em> and <em>file</em>.</p>
+
+<p>This is one of the primary mechanisms for getting content into applications that Puppet does not directly support and is very useful for those configuration files that don&#8217;t change much across sytems. For instance:</p>
+
+<pre><code>class sendmail {
+    file { &quot;/etc/mail/sendmail.cf&quot;:
+        source =&gt; &quot;puppet://server/module/sendmail.cf&quot;
+    }
+}</code></pre>
+
+<p>You can also leave out the server name, in which case <code>puppetd</code> will fill in the name of its configuration server and <code>puppet</code> will use the local filesystem. This makes it easy to use the same configuration in both local and centralized forms.</p>
+
+<p>Currently, only the <code>puppet</code> scheme is supported for source URL&#8217;s. Puppet will connect to the file server running on <code>server</code> to retrieve the contents of the file. If the <code>server</code> part is empty, the behavior of the command-line interpreter (<code>puppet</code>) and the client demon (<code>puppetd</code>) differs slightly: <code>puppet</code> will look such a file up on the module path on the local host, whereas <code>puppetd</code> will connect to the puppet server that it received the manifest from.</p>
+
+<p>See the fileserver configuration documentation for information on how to configure and use file services within Puppet.</p>
+
+<p>If you specify multiple file sources for a file, then the first source that exists will be used. This allows you to specify what amount to search paths for files:</p>
+
+<pre><code>file { &quot;/path/to/my/file&quot;:
+    source =&gt; [
+        &quot;/nfs/files/file.$host&quot;,
+        &quot;/nfs/files/file.$operatingsystem&quot;,
+        &quot;/nfs/files/file&quot;
+    ]
+}</code></pre>
+
+<p>This will use the first found file as the source.</p>
+<div class='note'><p>You cannot currently copy links using this mechanism; set <code>links</code> to <code>follow</code> if any remote sources are links.</p></div>
+<h3 id='id669'><code>sourceselect</code></h3>
+
+<p>Whether to copy all valid sources, or just the first one. This parameter is only used in recursive copies; by default, the first valid source is the only one used as a recursive source, but if this parameter is set to <code>all</code>, then all valid sources will have all of their contents copied to the local host, and for sources that have the same file, the source earlier in the list will be used. Valid values are <code>first</code>, <code>all</code>.</p>
+
+<h3 id='id670'><code>target</code></h3>
+
+<p>The target for creating a link. Currently, symlinks are the only type supported. Valid values are <code>notlink</code>. Values can match <code>/./</code>.</p>
+
+<h3 id='id671'><code>type</code></h3>
+
+<p>A read-only state to check the file type.</p>
+            </div>
+            <div class="secondary-content">
+                    <div id="subCol">
+        <h3 class="chapter">Contents</h3>
+        <ol class="chapters">
+<li><a href="#background">Background</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#platforms">Platforms</a></li>
+<li><a href="#version_compatibility">Version Compatibility</a></li>
+<li><a href="#examples">Examples</a></li>
+<li>
+<a href="#parameters">Parameters</a><ul style="list-style: none;">
+<li><a href="#id626"><code>backup</code></a></li>
+<li><a href="#id627"><code>checksum</code></a></li>
+<li><a href="#id628"><code>content</code></a></li>
+<li><a href="#id629"><code>ensure</code></a></li>
+<li><a href="#id630"><code>force</code></a></li>
+<li><a href="#id631"><code>group</code></a></li>
+<li><a href="#id632"><code>ignore</code></a></li>
+<li><a href="#id633"><code>links</code></a></li>
+<li><a href="#id634"><code>mode</code></a></li>
+<li><a href="#id635"><code>owner</code></a></li>
+<li><a href="#id636"><code>path</code></a></li>
+<li><a href="#id637"><code>purge</code></a></li>
+<li><a href="#id638"><code>recurse</code></a></li>
+<li><a href="#id639"><code>recurselimit</code></a></li>
+<li><a href="#id640"><code>replace</code></a></li>
+<li><a href="#id641"><code>selrange</code></a></li>
+<li><a href="#id642"><code>selrole</code></a></li>
+<li><a href="#id643"><code>seltype</code></a></li>
+<li><a href="#id644"><code>seluser</code></a></li>
+<li><a href="#id645"><code>source</code></a></li>
+<li><a href="#id646"><code>sourceselect</code></a></li>
+<li><a href="#id647"><code>target</code></a></li>
+<li><a href="#id648"><code>type</code></a></li>
+</ul>
+</li></ol></div>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+  		<footer id="footer">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <section id="newsletter">
+                <h4>Newsletter</h4>
+                <p>Stay up to date on all things puppet</p>
+                <form action="http://lfov.net/webrecorder/f" method="post" name="Newsletter">
+                  <input type="hidden" name="formid" value="3d424fd0-4204-435f-afde-aa1c4a6bc2f1"/>
+                  <input type="hidden" name="cid" value="LF_c268993e"/>
+                  <fieldset>
+                    <legend>Newsletter</legend>
+                    <label form="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                    <button type="submit">Subscribe</button>
+                  </fieldset>
+                </form>
+              </section>
+              <section id="elsewhere">
+                <h4>Elsewhere</h4>
+                <ul>
+                  <li class="chat"><a href="http://webchat.freenode.net/?channels=puppet" rel="external"><span class="indicator"></span><span>Chat with us on IRC</span></a></li>
+                  <li class="discussion"><a href="http://groups.google.com/group/puppet-users?pli=1" rel="external"><span class="indicator"></span><span>Join the Mailing List</span></a></li>
+                  <li class="facebook"><a href="http://www.facebook.com/pages/Portland-OR/Reductive-Labs/190644013795?ref=ts&v=wall" rel="external"><span class="indicator"></span><span>Become a Fan on Facebook</span></a></li>
+                  <li class="subscribe"><a href="http://feeds.feedburner.com/PuppetLabs" rel="external"><span class="indicator"></span><span>Subscribe to our blog</span></a></li>
+
+                  <li class="twitter"><a href="http://twitter.com/puppetlabs" rel="external"><span class="indicator"></span><span>Follow us on Twitter</span></a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="secondary-content">
+              <section id="book-it">
+                <h4>Get the book!</h4>
+                <p>Written by James Turnbull, <a href="http://apress.com/book/view/1590599780" rel="nofollow">Pulling Strings with Puppet</a> is the first book to introduce the powerful Puppet system administration tool. </p>
+                <img src="http://puppetlabs.com/images/book.png" />
+              </section>
+            </div>
+          </div>
+        </div>
+  		</footer>
+      <div id="copyright">
+        <div class="site-width">
+          &copy; 2010 <a href="http://puppetlabs.com/" title="Puppet Labs">Puppet Labs</a>
+          <span class="vcard">
+           <span class="org">Puppet Labs</span>
+           <a class="email" href="mailto:info@puppetlabs.com">info@puppetlabs.com</a>
+            <span class="adr">
+             <span class="street-address">222 NW Davis Street</span>
+             /
+             <span class="locality">Portland</span>, 
+             <span class="region">OR</span>
+             <span class="postal-code">97209</span>
+
+            </span>
+           <span class="tel">+1 503-805-9065</span>
+          </span>          
+        </div>
+      </div>
+    </div>
+    <!-- BEGIN: LOOPFUSE TRACKING -->
+    <script src="http://lfov.net/webrecorder/js/listen.js" type="text/Javascript"></script>
+    <script type="text/Javascript">
+    _lf_cid = "LF_c268993e";
+    _lf_remora();
+    </script>
+    <!-- END: LOOPFUSE TRACKING -->
+    
+  	<script type="text/javascript">Cufon.now();</script>
+  	<style type="text/css">h1, h2{ visibility : visible }</style>
+  	
+  </body>
+</html>
