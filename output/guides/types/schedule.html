@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<title>Documentation | Puppet Labs - schedule</title>
+  	<meta name="description" content="The open source leader in data center automation">
+  	<link rel="alternate" type="text/xml" title="Puppet Labs RSS 0.92 Feed" href="http://puppetlabs.com/feed/rss/">
+  	<link rel="alternate" type="application/atom+xml" title="Puppet Labs Atom Feed" href="http://puppetlabs.com/feed/atom/">
+  	<link rel="alternate" type="application/rss+xml" title="Puppet Labs RSS 2.0 Feed" href="http://puppetlabs.com/feed/">
+  	<link rel="pingback" href="http://puppetlabs.com/xmlrpc.php">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://puppetlabs.com/xmlrpc.php?rsd" />
+    <link rel='index' title='Puppet Labs' href='http://docs.puppetlabs.com' />
+
+<!-- Google stats -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1537572-5");
+pageTracker._setDomainName(".puppetlabs.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- End Google stats -->
+
+
+    <!-- FIXME: absolute paths -->
+
+    <script type='text/javascript' src='/files/javascripts/html5.js'></script>
+    <script type='text/javascript' src='/files/javascripts/jquery-1.3.2.min.js'></script>
+    <script type='text/javascript' src='/files/javascripts/drop_down.js'></script>
+    <script type='text/javascript' src='/files/javascripts/code_highlighter.js'></script>
+
+    <script type='text/javascript' src='/files/javascripts/cufon-yui.js'></script>
+    <script type='text/javascript' src='/files/fonts/Klavika_400-Klavika_600.font.js'></script>
+    <script type='text/javascript' src='/files/javascripts/ampersands.js'></script>
+
+
+    <!-- All in One SEO Pack 1.6.10.1 by Michael Torbert of Semper Fi Web Design[127,146] -->
+    <meta name="keywords" content="Puppet, puppet labs, reductive labs, open source, system administrator, ruby, data center, automation, support" />
+    <link rel="canonical" href="http://docs.puppetlabs.com" />
+    <!-- /all in one seo pack -->
+	
+    <!-- FIXME: absolute paths -->
+
+    <link rel="stylesheet" type="text/css" href="/files/stylesheets/style.css" media="screen"> <!-- index -->
+
+    <!--[if IE 7]>
+	  <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_7.css" media="screen"> <!-- index -->
+    <![endif]-->
+  
+    <!--[if IE 8]>
+	    <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_8.css" media="screen"> <!-- index -->
+    <![endif]-->		
+
+  	<script type="text/javascript">
+      Cufon.replace('h1, h2', { fontWeight: '600' });
+  	</script>
+</head>
+
+
+
+        
+  <body id="resources" class="docs">
+  <style type="text/css">h1, h2{ visibility : hidden }</style>		
+  <!--[if IE 8]>
+    <style type="text/css">h1, h2{ visibility : visible }</style>
+  <![endif]-->		
+
+  	<header id="header">
+      <div class="site-width">
+    		<h1><a href="http://puppetlabs.com/"><span>Puppet Labs</span></a></h1>
+        <a class="screen-reader-content" href="#content">Skip navigation</a>
+        <nav>
+      		<ul id="global-navigation">
+            <li id="puppet-tab" class="with-submenu">
+
+              <a href="http://puppetlabs.com/puppet/">
+                <span>Puppet</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>            
+                <li>
+                  <ul>
+                    <li class="page_item page-item-757"><a href="http://puppetlabs.com/puppet/introduction/" title="Introduction">Introduction</a></li>
+                    <li class="page_item page-item-769"><a href="http://puppetlabs.com/puppet/requirements/" title="Requirements">Requirements</a></li>
+                    <li class="page_item page-item-828"><a href="http://puppetlabs.com/puppet/features/" title="Features">Features</a></li>
+                    <li class="page_item page-item-956"><a href="http://puppetlabs.com/puppet/solutions/" title="Solutions">Solutions</a></li>
+                    <li class="page_item page-item-1159"><a href="http://puppetlabs.com/puppet/users/" title="Users">Users</a></li>
+                    <li class="page_item page-item-1074"><a href="http://puppetlabs.com/resources/white-papers" title="White Papers">White Papers</a></li>
+                    <li class="page_item page-item-1495"><a href="http://puppetlabs.com/resources/case-studies" title="Case Studies">Case Studies</a></li>
+                    <li class="page_item page-item-1044"><a href="http://puppetlabs.com/resources/downloads" title="Downloads">Downloads</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li class="page_item page-item-751"><a href="http://puppetlabs.com/puppet/related-projects/dashboard/" title="Dashboard">Dashboard</a></li>
+                    <li class="page_item page-item-753"><a href="http://puppetlabs.com/puppet/related-projects/facter/" title="Facter">Facter</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="services-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/services/">
+                <span>Services</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-783"><a href="http://puppetlabs.com/services/overview/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-839"><a href="http://puppetlabs.com/services/support/" title="Enterprise Support">Enterprise Support</a></li>
+                <li class="page_item page-item-845"><a href="http://puppetlabs.com/services/training-workshops/" title="On-Site Training &amp; Consulting">On-Site Training &amp; Consulting</a></li>
+                <li class="page_item page-item-849"><a href="http://puppetlabs.com/category/events/upcoming/" title="Events &amp; Public Training">Events &amp; Public Training</a></li>
+                <li class="page_item page-item-851"><a href="http://puppetlabs.com/services/partners/" title="Partners">Partners</a></li>
+                <li class="page_item page-item-1037"><a href="http://puppetlabs.com/resources/customer-support" title="Customer Support">Customer Support</a></li>
+              </ul>
+            </li>
+            <li id="resources-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/resources/">
+                <span>Resources</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-1048"><a href="http://puppetlabs.com/resources/overview-2/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-1040"><a href="http://docs.puppetlabs.com" title="Documentation">Documentation</a></li>
+                <li class="page_item page-item-872"><a href="http://puppetlabs.com/resources/downloads/" title="Downloads">Downloads</a></li>
+                <li class="page_item page-item-835"><a href="http://puppetlabs.com/resources/white-papers/" title="White Papers">White Papers</a></li>
+                <li class="page_item page-item-833"><a href="http://puppetlabs.com/resources/case-studies/" title="Case Studies">Case Studies</a></li>
+                <li class="page_item page-item-1052"><a href="http://puppetlabs.com/resources/customer-support/" title="Customer Support">Customer Support</a></li>
+              </ul>
+
+            </li>
+            <li id="community-tab">
+              <a href="http://puppetlabs.com/community/">
+                <span>Community</span>
+              </a>
+            </li>
+
+            <li id="company-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/company/">
+                <span>Company</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li><a href="http://puppetlabs.com/company/">About Us</a></li>
+                <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+              </ul>
+            </li>
+      		</ul>	   
+          <ul id="misc-navigation">
+            <li><a href="http://docs.puppetlabs.com">Documentation</a></li>
+            <li><a href="http://puppetlabs.com/resources/customer-support/">Support</a></li>
+            <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+            <li><a href="http://puppetlabs.com/resources/downloads" class="gateway">Download</a></li>
+          </ul>
+        </nav>
+    	</div>
+    </header>  
+
+      <section id="masthead">
+        <div class="site-width">
+          <h1>Docs: <span class="section-name">schedule</span></h1>
+          <ul id="doc-navigation">
+            <li><a href="/">Docs Home</a></li>
+            <li class="with-submenu">
+              <a href="#">
+                <span>Quick Nav</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+               <!-- the following links can't be relative, unfortunately -->
+               <!-- future: add some JS to disable this if running from file:// -->
+	            <dl>
+	              <dt>Guides</dt>
+	              <dd><a href="/index.html">Index</a></dd>
+                      <dt>Resource Types</dt>
+	              <dd><a href="/guides/types/">By Category</a></dd>
+	              <dd><a href="/guides/types/alphabetical_index.html">Alphabetical</a></dd>
+	              <dt>References</dt>
+                      <dd><a href="/references/2.6.0/">2.6.0</a></dd> 
+                      <dd><a href="/references/0.25.5/">0.25.5</a></dd> 
+	              <dd><a href="/references/0.25.4/">0.25.4</a></dd>
+	              <dd><a href="/references/0.25.3/">0.25.3</a></dd>
+	              <dd><a href="/references/0.25.2/">0.25.2</a></dd>
+	              <dd><a href="/references/0.25.1/">0.25.1</a></dd>
+	              <dd><a href="/references/0.25.0/">0.25.0</a></dd>
+	              <dd><a href="/references/0.24.8/">0.24.8</a></dd>
+	              <dd><a href="/references/">Older Versions</a></dd>
+	            </dl>
+            </li>
+            <li><a href="/contribute.html">Contribute</a></li>
+          </ul>
+        </div>
+      </section>
+    
+      <section id="content">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <h1 id='schedule'>schedule</h1>
+
+<p>Determine when Puppet runs</p>
+              <p>Defined schedules for Puppet. The important thing to understand about how schedules are currently implemented in Puppet is that they can only be used to stop a resource from being applied, they never guarantee that it is applied.</p>
+
+<p>Every time Puppet applies its configuration, it will collect the list of resources whose schedule does not eliminate them from running right then, but there is currently no system in place to guarantee that a given resource runs at a given time. If you specify a very restrictive schedule and Puppet happens to run at a time within that schedule, then the resources will get applied; otherwise, that work may never get done.</p>
+
+<p>Thus, it behooves you to use wider scheduling (e.g., over a couple of hours) combined with periods and repetitions. For instance, if you wanted to restrict certain resources to only running once, between the hours of two and 4 AM, then you would use this schedule:</p>
+
+<pre><code>schedule { maint:
+    range =&gt; &quot;2 - 4&quot;,
+    period =&gt; daily,
+    repeat =&gt; 1
+}</code></pre>
+
+<p>With this schedule, the first time that Puppet runs between 2 and 4 AM, all resources with this schedule will get applied, but they won&#8217;t get applied again between 2 and 4 because they will have already run once that day, and they won&#8217;t get applied outside that schedule because they will be outside the scheduled range.</p>
+
+<p>Puppet automatically creates a schedule for each valid period with the same name as that period (e.g., hourly and daily). Additionally, a schedule named <em>puppet</em> is created and used as the default, with the following attributes:</p>
+
+<pre><code>schedule { puppet:
+    period =&gt; hourly,
+    repeat =&gt; 2
+}</code></pre>
+
+<p>This will cause resources to be applied every 30 minutes by default.</p>
+
+<h2 id='parameters'>Parameters</h2>
+
+<h2 id='name'>name</h2>
+
+<ul>
+<li><strong>namevar</strong></li>
+</ul>
+
+<p>The name of the schedule. This name is used to retrieve the schedule when assigning it to an object:</p>
+
+<pre><code>schedule { daily:
+    period =&gt; daily,
+    range =&gt; [2, 4]
+}
+
+exec { &quot;/usr/bin/apt-get update&quot;:
+    schedule =&gt; daily
+}</code></pre>
+
+<h2 id='period'>period</h2>
+
+<p>The period of repetition for a resource. Choose from among a fixed list of <em>hourly</em>, <em>daily</em>, <em>weekly</em>, and <em>monthly</em>. The default is for a resource to get applied every time that Puppet runs, whatever that period is.</p>
+
+<p>Note that the period defines how often a given resource will get applied but not when; if you would like to restrict the hours that a given resource can be applied (e.g., only at night during a maintenance window) then use the <code>range</code> attribute.</p>
+
+<p>If the provided periods are not sufficient, you can provide a value to the <em>repeat</em> attribute, which will cause Puppet to schedule the affected resources evenly in the period the specified number of times. Take this schedule:</p>
+
+<pre><code>schedule { veryoften:
+    period =&gt; hourly,
+    repeat =&gt; 6
+}</code></pre>
+
+<p>This can cause Puppet to apply that resource up to every 10 minutes.</p>
+
+<p>At the moment, Puppet cannot guarantee that level of repetition; that is, it can run up to every 10 minutes, but internal factors might prevent it from actually running that often (e.g., long-running Puppet runs will squash conflictingly scheduled runs).</p>
+
+<p>See the <code>periodmatch</code> attribute for tuning whether to match times by their distance apart or by their specific value. Valid values are <code>hourly</code>, <code>daily</code>, <code>weekly</code>, <code>monthly</code>, <code>never</code>.</p>
+
+<h2 id='periodmatch'>periodmatch</h2>
+
+<p>Whether periods should be matched by number (e.g., the two times are in the same hour) or by distance (e.g., the two times are 60 minutes apart). Valid values are <code>number</code>, <code>distance</code>.</p>
+
+<h2 id='range'>range</h2>
+
+<p>The earliest and latest that a resource can be applied. This is always a range within a 24 hour period, and hours must be specified in numbers between 0 and 23, inclusive. Minutes and seconds can be provided, using the normal colon as a separator. For instance:</p>
+
+<pre><code>schedule { maintenance:
+    range =&gt; &quot;1:30 - 4:30&quot;
+}</code></pre>
+
+<p>This is mostly useful for restricting certain resources to being applied in maintenance windows or during off-peak hours.</p>
+
+<h2 id='repeat'>repeat</h2>
+
+<p>How often the application gets repeated in a given period. Defaults to 1. Must be an integer.</p>
+<hr />
+            </div>
+            <div class="secondary-content">
+                    <div id="subCol">
+        <h3 class="chapter">Contents</h3>
+        <ol class="chapters">
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#name">name</a></li>
+<li><a href="#period">period</a></li>
+<li><a href="#periodmatch">periodmatch</a></li>
+<li><a href="#range">range</a></li>
+<li><a href="#repeat">repeat</a></li></ol></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+		<footer id="footer">
+      <div class="site-width">
+        <div class="primary-secondary-content">
+          <div class="primary-content">
+            <section id="newsletter">
+                 <h4>Puppet Labs is Hiring</h4>
+                 <p><a href="http://www.puppetlabs.com/company/jobs/">Engineers, developers & consultants</a>
+                  <p>  
+		<h4>Newsletter</h4>
+              <p>Stay up to date on all things puppet</p>
+              <form action="http://lfov.net/webrecorder/f" method="post" name="Newsletter" id="footerform">
+                <input type="hidden" name="formid" value="3d424fd0-4204-435f-afde-aa1c4a6bc2f1"/>
+                <input type="hidden" name="cid" value="LF_c268993e"/>
+                <fieldset>
+                  <legend>Newsletter</legend>
+                  <label form="email">Email</label>
+                  <input type="text" name="email" id="email" class="required email" />
+                  <button type="submit">Subscribe</button>
+                </fieldset>
+              </form>
+
+            </section>
+            <section id="elsewhere">
+              <h4>Get Involved</h4>
+              <ul>
+                <li class="chat"><a href="http://webchat.freenode.net/?channels=puppet" rel="external"><span class="indicator"></span><span>Chat with us on IRC</span></a></li>
+                <li class="discussion"><a href="http://groups.google.com/group/puppet-users?pli=1" rel="external"><span class="indicator"></span><span>Join the Mailing List</span></a></li>
+                
+                <li class="linkedin"><a href="http://www.linkedin.com/groups?about=&gid=696467&trk=anet_ug_grppro" rel="external"><span class="indicator"></span><span>Join the Puppet Users LinkedIn group</span></a></li>
+
+		
+
+              </ul>
+            </section>
+          </div>
+          <div class="secondary-content">
+            <section id="book-it">
+              <h4>Get the book!</h4>
+              <p>Written by James Turnbull, <a href="http://apress.com/book/view/1590599780" rel="nofollow">Pulling Strings with Puppet</a> is the first book to introduce the powerful Puppet system administration tool. </p>
+              <a href="http://apress.com/book/view/1590599780" rel="nofollow"><img src="http://puppetlabs.com/images/book.png" /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+		</footer>
+
+    <div id="copyright">
+      <div class="site-width">
+        &copy; <?= date('Y'); ?> <a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
+        <span class="vcard">
+         <span class="org"></span>
+         <a class="email" href="mailto:info@puppetlabs.com">info@puppetlabs.com</a>
+          <span class="adr">
+           <span class="street-address">222 NW Davis Street</span>
+           /
+           <span class="locality">Portland</span>, 
+           <span class="region">OR</span>
+           <span class="postal-code">97209</span>
+
+          </span>
+         <span class="tel">1-877-575-9775</span>
+        </span>          
+      </div>
+    </div>
+    <!-- BEGIN: LOOPFUSE TRACKING -->
+    <script src="http://lfov.net/webrecorder/js/listen.js" type="text/Javascript"></script>
+    <script type="text/Javascript">
+    _lf_cid = "LF_c268993e";
+    _lf_remora();
+    </script>
+    <!-- END: LOOPFUSE TRACKING -->
+    
+  	<script type="text/javascript">Cufon.now();</script>
+  	<style type="text/css">h1, h2, .btn { visibility : visible; }</style>
+
+	</body>
+</html>        

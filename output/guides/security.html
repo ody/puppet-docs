@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<title>Documentation | Puppet Labs - Security Infrastructure</title>
+  	<meta name="description" content="The open source leader in data center automation">
+  	<link rel="alternate" type="text/xml" title="Puppet Labs RSS 0.92 Feed" href="http://puppetlabs.com/feed/rss/">
+  	<link rel="alternate" type="application/atom+xml" title="Puppet Labs Atom Feed" href="http://puppetlabs.com/feed/atom/">
+  	<link rel="alternate" type="application/rss+xml" title="Puppet Labs RSS 2.0 Feed" href="http://puppetlabs.com/feed/">
+  	<link rel="pingback" href="http://puppetlabs.com/xmlrpc.php">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://puppetlabs.com/xmlrpc.php?rsd" />
+    <link rel='index' title='Puppet Labs' href='http://docs.puppetlabs.com' />
+
+<!-- Google stats -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1537572-5");
+pageTracker._setDomainName(".puppetlabs.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- End Google stats -->
+
+
+    <!-- FIXME: absolute paths -->
+
+    <script type='text/javascript' src='/files/javascripts/html5.js'></script>
+    <script type='text/javascript' src='/files/javascripts/jquery-1.3.2.min.js'></script>
+    <script type='text/javascript' src='/files/javascripts/drop_down.js'></script>
+    <script type='text/javascript' src='/files/javascripts/code_highlighter.js'></script>
+
+    <script type='text/javascript' src='/files/javascripts/cufon-yui.js'></script>
+    <script type='text/javascript' src='/files/fonts/Klavika_400-Klavika_600.font.js'></script>
+    <script type='text/javascript' src='/files/javascripts/ampersands.js'></script>
+
+
+    <!-- All in One SEO Pack 1.6.10.1 by Michael Torbert of Semper Fi Web Design[127,146] -->
+    <meta name="keywords" content="Puppet, puppet labs, reductive labs, open source, system administrator, ruby, data center, automation, support" />
+    <link rel="canonical" href="http://docs.puppetlabs.com" />
+    <!-- /all in one seo pack -->
+	
+    <!-- FIXME: absolute paths -->
+
+    <link rel="stylesheet" type="text/css" href="/files/stylesheets/style.css" media="screen"> <!-- index -->
+
+    <!--[if IE 7]>
+	  <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_7.css" media="screen"> <!-- index -->
+    <![endif]-->
+  
+    <!--[if IE 8]>
+	    <link rel="stylesheet" type="text/css" href="/files/stylesheets/ie_8.css" media="screen"> <!-- index -->
+    <![endif]-->		
+
+  	<script type="text/javascript">
+      Cufon.replace('h1, h2', { fontWeight: '600' });
+  	</script>
+</head>
+
+
+
+        
+  <body id="resources" class="docs">
+  <style type="text/css">h1, h2{ visibility : hidden }</style>		
+  <!--[if IE 8]>
+    <style type="text/css">h1, h2{ visibility : visible }</style>
+  <![endif]-->		
+
+  	<header id="header">
+      <div class="site-width">
+    		<h1><a href="http://puppetlabs.com/"><span>Puppet Labs</span></a></h1>
+        <a class="screen-reader-content" href="#content">Skip navigation</a>
+        <nav>
+      		<ul id="global-navigation">
+            <li id="puppet-tab" class="with-submenu">
+
+              <a href="http://puppetlabs.com/puppet/">
+                <span>Puppet</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>            
+                <li>
+                  <ul>
+                    <li class="page_item page-item-757"><a href="http://puppetlabs.com/puppet/introduction/" title="Introduction">Introduction</a></li>
+                    <li class="page_item page-item-769"><a href="http://puppetlabs.com/puppet/requirements/" title="Requirements">Requirements</a></li>
+                    <li class="page_item page-item-828"><a href="http://puppetlabs.com/puppet/features/" title="Features">Features</a></li>
+                    <li class="page_item page-item-956"><a href="http://puppetlabs.com/puppet/solutions/" title="Solutions">Solutions</a></li>
+                    <li class="page_item page-item-1159"><a href="http://puppetlabs.com/puppet/users/" title="Users">Users</a></li>
+                    <li class="page_item page-item-1074"><a href="http://puppetlabs.com/resources/white-papers" title="White Papers">White Papers</a></li>
+                    <li class="page_item page-item-1495"><a href="http://puppetlabs.com/resources/case-studies" title="Case Studies">Case Studies</a></li>
+                    <li class="page_item page-item-1044"><a href="http://puppetlabs.com/resources/downloads" title="Downloads">Downloads</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li class="page_item page-item-751"><a href="http://puppetlabs.com/puppet/related-projects/dashboard/" title="Dashboard">Dashboard</a></li>
+                    <li class="page_item page-item-753"><a href="http://puppetlabs.com/puppet/related-projects/facter/" title="Facter">Facter</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="services-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/services/">
+                <span>Services</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-783"><a href="http://puppetlabs.com/services/overview/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-839"><a href="http://puppetlabs.com/services/support/" title="Enterprise Support">Enterprise Support</a></li>
+                <li class="page_item page-item-845"><a href="http://puppetlabs.com/services/training-workshops/" title="On-Site Training &amp; Consulting">On-Site Training &amp; Consulting</a></li>
+                <li class="page_item page-item-849"><a href="http://puppetlabs.com/category/events/upcoming/" title="Events &amp; Public Training">Events &amp; Public Training</a></li>
+                <li class="page_item page-item-851"><a href="http://puppetlabs.com/services/partners/" title="Partners">Partners</a></li>
+                <li class="page_item page-item-1037"><a href="http://puppetlabs.com/resources/customer-support" title="Customer Support">Customer Support</a></li>
+              </ul>
+            </li>
+            <li id="resources-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/resources/">
+                <span>Resources</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li class="page_item page-item-1048"><a href="http://puppetlabs.com/resources/overview-2/" title="Overview">Overview</a></li>
+                <li class="page_item page-item-1040"><a href="http://docs.puppetlabs.com" title="Documentation">Documentation</a></li>
+                <li class="page_item page-item-872"><a href="http://puppetlabs.com/resources/downloads/" title="Downloads">Downloads</a></li>
+                <li class="page_item page-item-835"><a href="http://puppetlabs.com/resources/white-papers/" title="White Papers">White Papers</a></li>
+                <li class="page_item page-item-833"><a href="http://puppetlabs.com/resources/case-studies/" title="Case Studies">Case Studies</a></li>
+                <li class="page_item page-item-1052"><a href="http://puppetlabs.com/resources/customer-support/" title="Customer Support">Customer Support</a></li>
+              </ul>
+
+            </li>
+            <li id="community-tab">
+              <a href="http://puppetlabs.com/community/">
+                <span>Community</span>
+              </a>
+            </li>
+
+            <li id="company-tab" class="with-submenu">
+              <a href="http://puppetlabs.com/company/">
+                <span>Company</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+              <ul>
+                <li><a href="http://puppetlabs.com/company/">About Us</a></li>
+                <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+              </ul>
+            </li>
+      		</ul>	   
+          <ul id="misc-navigation">
+            <li><a href="http://docs.puppetlabs.com">Documentation</a></li>
+            <li><a href="http://puppetlabs.com/resources/customer-support/">Support</a></li>
+            <li><a href="http://puppetlabs.com/company/#contact">Contact Us</a></li>
+            <li><a href="http://puppetlabs.com/resources/downloads" class="gateway">Download</a></li>
+          </ul>
+        </nav>
+    	</div>
+    </header>  
+
+      <section id="masthead">
+        <div class="site-width">
+          <h1>Docs: <span class="section-name">Security Infrastructure</span></h1>
+          <ul id="doc-navigation">
+            <li><a href="/">Docs Home</a></li>
+            <li class="with-submenu">
+              <a href="#">
+                <span>Quick Nav</span>
+                <span class="drop-down-trigger"></span>
+              </a>
+               <!-- the following links can't be relative, unfortunately -->
+               <!-- future: add some JS to disable this if running from file:// -->
+	            <dl>
+	              <dt>Guides</dt>
+	              <dd><a href="/index.html">Index</a></dd>
+                      <dt>Resource Types</dt>
+	              <dd><a href="/guides/types/">By Category</a></dd>
+	              <dd><a href="/guides/types/alphabetical_index.html">Alphabetical</a></dd>
+	              <dt>References</dt>
+                      <dd><a href="/references/2.6.0/">2.6.0</a></dd> 
+                      <dd><a href="/references/0.25.5/">0.25.5</a></dd> 
+	              <dd><a href="/references/0.25.4/">0.25.4</a></dd>
+	              <dd><a href="/references/0.25.3/">0.25.3</a></dd>
+	              <dd><a href="/references/0.25.2/">0.25.2</a></dd>
+	              <dd><a href="/references/0.25.1/">0.25.1</a></dd>
+	              <dd><a href="/references/0.25.0/">0.25.0</a></dd>
+	              <dd><a href="/references/0.24.8/">0.24.8</a></dd>
+	              <dd><a href="/references/">Older Versions</a></dd>
+	            </dl>
+            </li>
+            <li><a href="/contribute.html">Contribute</a></li>
+          </ul>
+        </div>
+      </section>
+    
+      <section id="content">
+        <div class="site-width">
+          <div class="primary-secondary-content">
+            <div class="primary-content">
+              <h1 id='security_infrastructure'>Security Infrastructure</h1>
+
+<p>Learn about Puppet&#8217;s built in security systems.</p>
+              <h2 id='ssl'>SSL</h2>
+
+<p>In centrally managed server context, Puppet uses SSL for security, which is the same thing your browser uses. We find this system is much easier to distribute than relying on SSH keys for bi-directional communication, and is better suited to writing applications (as opposed to just doing remote scripting).</p>
+
+<h2 id='puppetca'>puppetca</h2>
+
+<p>When a node starts up that does not have a certificate, it checks in with the configured puppetmaster (central management daemon) and sends a certificate request. Puppet can either be configured to autosign the certificate (generally not recommended for production environmnets), or a list of certificates that need to be signed can be shown with:</p>
+
+<pre><code>puppetca --list</code></pre>
+
+<p>To sign a certificate, use the following:</p>
+
+<pre><code>puppetca --sign servername.example.org</code></pre>
+
+<p>Puppetca can also be used to revoke certificates, see the puppetca manpage for further information.</p>
+
+<h2 id='firewall_details'>Firewall details</h2>
+
+<p>If a firewall is present, you should open port 8140, both tcp and udp, on the server and client machines.</p>
+
+<h2 id='file_serving_configuration'>File Serving Configuration</h2>
+
+<p>Puppet&#8217;s fileserver is used to serve up files (and directories full of files) to the client. It can be configured in /etc/puppet/fileserver.conf (default path location):</p>
+
+<pre><code>[modulename]
+path /path/to/files
+allow *.domain.com
+deny *.wireless.domain.com</code></pre>
+
+<p>These three options represent the only options currently available in the configuration file. The module name, somewhat obviously, goes in the brackets. The path is the only required option. The default security configuration is to deny all access, so if no allow lines are specified, the module will be configured but available to no one.</p>
+
+<p>The path can contain any or all of %h, %H, and %d, which are dynamically replaced by the client’s hostname, its fully qualified domain name and it’s domain name, respectively. All are taken from the client’s SSL certificate (so be careful if you’ve got hostname/certname mismatches). This is useful in creating modules where files for each client are kept completely separately, e.g. for private ssh host keys. For example, with the configuration</p>
+
+<pre><code>[private]
+path /data/private/%h
+allow *</code></pre>
+
+<p>The request for file /private/file.txt from client client1.example.com will look for a file /data/private/client1/file.txt, while the same request from client2.example.com will try to retrieve the file /data/private/client2/file.txt on the fileserver.</p>
+
+<p>Currently paths cannot contain trailing slashes or an error will result. Also take care that in puppet.conf youare not specifying directory locations that have trailing slashes.</p>
+
+<h2 id='authconf'>auth.conf</h2>
+
+<p>rest_authconfig = $confdir/auth.conf</p>
+
+<p>The auth.conf doesn&#8217;t exist by default, but puppet has some default settings that will be put in place if you don&#8217;t create an auth.conf. You&#8217;ll see these settings if you run your puppetmaster in debug mode and then connect with a client.</p>
+
+<p>There&#8217;s also an example auth.conf file in the puppet source in conf/auth.conf</p>
+
+<p>http://github.com/reductivelabs/puppet/blob/master/conf/auth.conf</p>
+
+<p>The ACL&#8217;s (Access Control Lists) in the auth.conf are checked in order of appearance.</p>
+
+<p>Supported syntax: auth.conf supports two different syntax depending on how you want to express the ACL.</p>
+
+<h3 id='path_syntax'>Path syntax</h3>
+
+<p>path /path/to/resource <span>environment envlist</span> <span>method methodlist</span> <span>auth<span>enthicated</span> {yes|no|on|off|any}</span> allow <span>host|ip|<em>] deny <span>host|ip</span></em></span></p>
+
+<p>The path is matched as a prefix. That is /file matches both /file_metadata and /file_content.</p>
+
+<p>Ex:</p>
+
+<pre><code>path /certificate_revocation_list/ca
+method find
+allow *</code></pre>
+
+<p>will allow all nodes to access the certificates services</p>
+
+<h3 id='regex_syntax'>Regex syntax:</h3>
+
+<p>This is differentiated from the path syntaxby a &#8217;~&#8217;</p>
+
+<p>path ~ regex <span>environment envlist</span> <span>method methodlist</span> <span>auth<span>enthicated</span> {yes|no|on|off|any}</span> allow <span>host|ip|<em>] deny <span>host|ip</span></em></span></p>
+
+<p>The regex syntax is the same as ruby ones.</p>
+
+<p>Ex:</p>
+
+<pre><code>path ~ .pp$</code></pre>
+
+<p>will match every resource ending in .pp (manifests files for instance)</p>
+
+<pre><code>path ~ ^/catalog/([^/]+)$
+method find
+allow $1</code></pre>
+
+<p>will allow nodes to retrieve their only their own catalog</p>
+
+<p>environment:: restrict an ACL to a specific set of environments method:: restrict an ACL to a specific set of methods (find, search, save) auth:: restrict an ACL to an authenticated or unauthenticated request the default when unspecified is to restrict the ACL to authenticated requests (ie exactly as if auth yes was present).</p>
+
+<p>If you want to test the REST API without worrying about ACL permissions, here&#8217;s a completely permissive auth.conf file</p>
+
+<pre><code>path /
+auth no
+allow *</code></pre>
+
+<h2 id='namespaceauthconf'>namespaceauth.conf</h2>
+
+<p>authconfig = $confdir/namespaceauth.conf</p>
+
+<p>This file controls the http connections to the puppet agent. It is necessary to start the puppet agent with the listen true option.</p>
+
+<p>There&#8217;s an example namespaceauth.conf file in the puppet source in conf/auth.conf</p>
+
+<p>http://github.com/reductivelabs/puppet/blob/master/conf/namespaceauth.conf</p>
+
+<h2 id='serverless_operation'>Serverless operation</h2>
+
+<p>In maximum security environments, or disconnected setups, it is possible to run puppet without the central management daemon. In this case, run &#8216;puppet&#8217; locally instead of puppetd, and make sure the manifests are transferrred to the managed machine before running puppet, as there is no &#8216;puppetmasterd&#8217; to serve up the manifests and source material.</p>
+            </div>
+            <div class="secondary-content">
+                    <div id="subCol">
+        <h3 class="chapter">Contents</h3>
+        <ol class="chapters">
+<li><a href="#ssl">SSL</a></li>
+<li><a href="#puppetca">puppetca</a></li>
+<li><a href="#firewall_details">Firewall details</a></li>
+<li><a href="#file_serving_configuration">File Serving Configuration</a></li>
+<li>
+<a href="#authconf">auth.conf</a><ul style="list-style: none;">
+<li><a href="#path_syntax">Path syntax</a></li>
+<li><a href="#regex_syntax">Regex syntax:</a></li>
+</ul>
+</li>
+<li><a href="#namespaceauthconf">namespaceauth.conf</a></li>
+<li><a href="#serverless_operation">Serverless operation</a></li></ol></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+		<footer id="footer">
+      <div class="site-width">
+        <div class="primary-secondary-content">
+          <div class="primary-content">
+            <section id="newsletter">
+                 <h4>Puppet Labs is Hiring</h4>
+                 <p><a href="http://www.puppetlabs.com/company/jobs/">Engineers, developers & consultants</a>
+                  <p>  
+		<h4>Newsletter</h4>
+              <p>Stay up to date on all things puppet</p>
+              <form action="http://lfov.net/webrecorder/f" method="post" name="Newsletter" id="footerform">
+                <input type="hidden" name="formid" value="3d424fd0-4204-435f-afde-aa1c4a6bc2f1"/>
+                <input type="hidden" name="cid" value="LF_c268993e"/>
+                <fieldset>
+                  <legend>Newsletter</legend>
+                  <label form="email">Email</label>
+                  <input type="text" name="email" id="email" class="required email" />
+                  <button type="submit">Subscribe</button>
+                </fieldset>
+              </form>
+
+            </section>
+            <section id="elsewhere">
+              <h4>Get Involved</h4>
+              <ul>
+                <li class="chat"><a href="http://webchat.freenode.net/?channels=puppet" rel="external"><span class="indicator"></span><span>Chat with us on IRC</span></a></li>
+                <li class="discussion"><a href="http://groups.google.com/group/puppet-users?pli=1" rel="external"><span class="indicator"></span><span>Join the Mailing List</span></a></li>
+                
+                <li class="linkedin"><a href="http://www.linkedin.com/groups?about=&gid=696467&trk=anet_ug_grppro" rel="external"><span class="indicator"></span><span>Join the Puppet Users LinkedIn group</span></a></li>
+
+		
+
+              </ul>
+            </section>
+          </div>
+          <div class="secondary-content">
+            <section id="book-it">
+              <h4>Get the book!</h4>
+              <p>Written by James Turnbull, <a href="http://apress.com/book/view/1590599780" rel="nofollow">Pulling Strings with Puppet</a> is the first book to introduce the powerful Puppet system administration tool. </p>
+              <a href="http://apress.com/book/view/1590599780" rel="nofollow"><img src="http://puppetlabs.com/images/book.png" /></a>
+            </section>
+          </div>
+        </div>
+      </div>
+		</footer>
+
+    <div id="copyright">
+      <div class="site-width">
+        &copy; <?= date('Y'); ?> <a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
+        <span class="vcard">
+         <span class="org"></span>
+         <a class="email" href="mailto:info@puppetlabs.com">info@puppetlabs.com</a>
+          <span class="adr">
+           <span class="street-address">222 NW Davis Street</span>
+           /
+           <span class="locality">Portland</span>, 
+           <span class="region">OR</span>
+           <span class="postal-code">97209</span>
+
+          </span>
+         <span class="tel">1-877-575-9775</span>
+        </span>          
+      </div>
+    </div>
+    <!-- BEGIN: LOOPFUSE TRACKING -->
+    <script src="http://lfov.net/webrecorder/js/listen.js" type="text/Javascript"></script>
+    <script type="text/Javascript">
+    _lf_cid = "LF_c268993e";
+    _lf_remora();
+    </script>
+    <!-- END: LOOPFUSE TRACKING -->
+    
+  	<script type="text/javascript">Cufon.now();</script>
+  	<style type="text/css">h1, h2, .btn { visibility : visible; }</style>
+
+	</body>
+</html>        
