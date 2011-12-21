@@ -189,7 +189,7 @@ By the way, `--configprint` is wonderful. Puppet has a _lot_ of [config options]
 Modules
 -------
 
-So anyway, modules are re-usable bundles of code and data. Puppet autoloads manifests from the modules in its `modulepath`, which means you can declare a class stored in a module from anywhere. Let's just convert that last class to a module immediately, so you can see what I'm talking about:
+Modules are re-usable bundles of code and data. Puppet autoloads manifests from the modules in its `modulepath`, which means you can declare a class stored in a module from anywhere. Let's just convert that last class to a module immediately, so you can see what I'm talking about:
 
     # cd /etc/puppetlabs/puppet/modules
     # mkdir ntp; cd ntp; mkdir manifests; cd manifests
@@ -260,6 +260,11 @@ But we're not quite done yet. See how the manifest is referring to some files st
 There --- our little example from last chapter has grown up into a self-contained blob of awesome.
 
 [^dashe]: The `-e` flag lets you give puppet apply a line of manifest code instead of a file, same as with Perl or Ruby.
+
+### Obtaining Modules
+
+Puppet Labs provides the [Puppet Forge](http://forge.puppetlabs.com), the place to share and find Puppet modules. The Puppet Forge is a great place to start looking for modules that you can use or adapt for your environment. Most of these modules are open source and you can easily contribute updates and changes to improve or enhance these modules. You can also contribute your own modules.
+
 
 Module Structure
 ----------------
